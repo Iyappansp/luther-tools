@@ -124,8 +124,21 @@ body.dark .av-name {
 }
 
 body.dark .breadcrumb-bar {
-  background: var(--surface);
+  background: rgba(21, 25, 33, 0.5);
   border-bottom: 1px solid var(--border);
+}
+
+body.dark .breadcrumb-inner .sep {
+  color: var(--gray-300);
+  opacity: 0.3;
+}
+
+body.dark .breadcrumb-inner .current {
+  color: var(--gold-light);
+}
+
+body.dark .breadcrumb-inner .current::after {
+  background: var(--gold-light);
 }
 
 body.dark select,
