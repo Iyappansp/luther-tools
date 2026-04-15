@@ -5,8 +5,9 @@
 /* Sidebar */
 .dash-sidebar{width:255px;flex-shrink:0;background:var(--surface);border-right:1px solid var(--border);display:flex;flex-direction:column;overflow-y:auto;transition:var(--transition);z-index:100}
 .sb-header{padding:22px 18px;border-bottom:1px solid var(--border)}
-.sb-logo{display:flex;align-items:center;gap:10px;font-family:var(--font-head);font-size:1.15rem;font-weight:700;color:var(--primary);text-decoration:none;margin-bottom:3px}
-.sb-logo-icon{width:36px;height:36px;background:var(--primary);border-radius:9px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:.95rem;flex-shrink:0}
+.sb-logo{display:flex!important;align-items:center!important;gap:12px;font-family:var(--font-head);font-size:1.25rem;font-weight:800;color:var(--primary);text-decoration:none;margin-bottom:5px}
+.sb-logo-icon{width:40px;height:40px;background:var(--secondary);border-radius:10px;display:flex!important;align-items:center!important;justify-content:center!important;padding:6px;flex-shrink:0;box-shadow:0 4px 10px rgba(0,0,0,.2)}
+.sb-logo-icon img{width:100%;height:100%;object-fit:contain}
 .sb-sub{font-size:.72rem;color:var(--text-muted);padding-left:46px}
 .sb-user{padding:18px;display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--border)}
 .sb-av{width:38px;height:38px;background:linear-gradient(135deg,var(--primary),var(--gold));border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:.85rem;flex-shrink:0}

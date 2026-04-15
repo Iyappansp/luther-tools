@@ -259,6 +259,7 @@
     }
 
     .theme-toggle-fixed { position: fixed; top: 24px; right: 24px; z-index: 100; }
+    .rtl-toggle-fixed { position: fixed; top: 24px; right: 74px; z-index: 100; }
 
     /* Light Mode */
     body.light { background: #f3f4f6; }
@@ -270,18 +271,17 @@
     body.light .tier-opt.sel { background: rgba(146, 64, 14, 0.05); }
     body.light .step-dot { background: var(--gray-200); color: var(--text-muted); }
   </style>
+  <link rel="icon" type="image/png" href="assets/images/favicon.png"/>
 </head>
 <body>
 
+<button class="hdr-btn rtl-toggle-fixed" data-rtl-toggle title="Toggle RTL"><img src="https://img.icons8.com/isometric/30/geography.png" alt="RTL" style="width:20px;height:20px;"></button>
 <button class="hdr-btn theme-toggle-fixed" data-theme-toggle>
   <span class="theme-ico">🌙</span>
 </button>
 
 <div class="auth-card">
-  <a href="index.html" class="logo-container" style="text-decoration: none;">
-    <div class="logo-badge">🎸</div>
-    <div style="font-family: var(--font-head); font-size: 1.4rem; font-weight: 800; color: #fff;">LuthierTools</div>
-  </a>
+  <a href="index.html" class="logo-container" style="text-decoration: none;"><div class="logo-badge" style="background:var(--secondary); padding:8px;"><img src="assets/images/favicon.png" alt="Logo" style="width:100%;height:100%;object-fit:contain;"></div><div class="logo-text">LuthierTools</div></a>
 
   <h1 class="auth-title">Create Trade Account</h1>
   <p class="auth-subtitle">Join our community of master builders</p>

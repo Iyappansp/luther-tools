@@ -34,12 +34,31 @@ const Theme = {
 /* ── RTL ENGINE ───────────────────────────── */
 const RTL = {
   init(){
-    if(localStorage.getItem('lt-rtl') === '1') this.on();
+    const isRtl = localStorage.getItem('lt-rtl') === '1';
+    if(isRtl) this.on(true);
     document.querySelectorAll('[data-rtl-toggle]').forEach(b => b.addEventListener('click', () => this.toggle()));
   },
-  on(){ document.body.classList.add('rtl'); document.documentElement.dir='rtl'; localStorage.setItem('lt-rtl','1'); },
-  off(){ document.body.classList.remove('rtl'); document.documentElement.dir='ltr'; localStorage.setItem('lt-rtl','0'); },
-  toggle(){ document.body.classList.contains('rtl') ? this.off() : this.on(); }
+  on(init = false){
+    document.body.classList.add('rtl');
+    document.documentElement.dir = 'rtl';
+    localStorage.setItem('lt-rtl', '1');
+    if(!init && window.Toast) Toast.show('Right-to-Left Mode Active');
+    this.updateUI(true);
+  },
+  off(){
+    document.body.classList.remove('rtl');
+    document.documentElement.dir = 'ltr';
+    localStorage.setItem('lt-rtl', '0');
+    if(window.Toast) Toast.show('Left-to-Right Mode Active');
+    this.updateUI(false);
+  },
+  toggle(){ document.body.classList.contains('rtl') ? this.off() : this.on(); },
+  updateUI(isRtl){
+    document.querySelectorAll('[data-rtl-toggle]').forEach(btn => {
+      btn.style.borderColor = isRtl ? 'var(--primary)' : '';
+      btn.style.background = isRtl ? 'rgba(146,64,14,0.05)' : '';
+    });
+  }
 };
 
 /* ── HEADER SCROLL ────────────────────────── */

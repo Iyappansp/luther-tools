@@ -14,12 +14,13 @@
     .err-icon{font-size:5.5rem;display:block;animation:wobble 3s ease-in-out infinite;position:relative;z-index:2;margin-bottom:6px}
     @keyframes wobble{0%,100%{transform:rotate(0)}25%{transform:rotate(-7deg)}75%{transform:rotate(7deg)}}
   </style>
+  <link rel="icon" type="image/png" href="assets/images/favicon.png"/>
 </head>
 <body>
 
 <header class="site-header">
   <div class="hdr-inner">
-    <a href="index.html" class="logo-wrap"><div class="logo-icon">🎸</div><span>LuthierTools</span></a>
+    <a href="index.html" class="logo-wrap"><div class="logo-icon"><img src="assets/images/favicon.png" alt="Logo"></div><span>LuthierTools</span></a>
     <nav class="nav-links">
       <a href="index.html">Home</a><a href="tools.html">Tools</a><a href="supplies.html">Supplies</a>
       <a href="tutorials.html">Tutorials</a><a href="community.html">Community</a><a href="contact.html">Contact</a>
@@ -27,6 +28,7 @@
     </nav>
     <div class="hdr-actions">
       <button class="hdr-btn" data-theme-toggle><span class="theme-ico">🌙</span></button>
+            <button class="hdr-btn" data-rtl-toggle title="Toggle RTL"><img src="https://img.icons8.com/isometric/30/geography.png" alt="RTL" style="width:20px;height:20px;"></button>
       <button class="hamburger"><span></span><span></span><span></span></button>
     </div>
   </div>

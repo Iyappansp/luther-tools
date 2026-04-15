@@ -6,11 +6,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
   <link rel="stylesheet" href="assets/css/style.css"/>
   <link rel="stylesheet" href="assets/css/dark-mode.css"/>
-  <link rel="stylesheet" href="assets/css/rtl.css"/></head><body>
+  <link rel="stylesheet" href="assets/css/rtl.css"/>  <link rel="icon" type="image/png" href="assets/images/favicon.png"/>
+</head><body>
 
 <header class="site-header">
   <div class="hdr-inner">
-    <a href="index.html" class="logo-wrap"><div class="logo-icon" style="background:transparent;"><img src="https://img.icons8.com/isometric/50/guitar.png" alt="Logo" style="width:100%;height:100%;object-fit:contain;"></div><span>LuthierTools</span></a>
+    <a href="index.html" class="logo-wrap"><div class="logo-icon"><img src="assets/images/favicon.png" alt="Logo"></div><span>LuthierTools</span></a>
     <nav class="nav-links">
       <a href="index.html" class="active">Home</a>
       <a href="home-2.html">Home v2</a>
@@ -28,6 +29,7 @@
     <div class="hdr-actions">
       <button class="hdr-btn" title="Cart"><img src="https://img.icons8.com/isometric/30/shopping-cart.png" alt="Cart" style="width:20px;height:20px;"><span class="cart-count">0</span></button>
       <button class="hdr-btn" data-theme-toggle title="Toggle Theme"><span class="theme-ico"><img src="https://img.icons8.com/isometric/30/moon.png" alt="Theme" style="width:20px;height:20px;"></span></button>
+            <button class="hdr-btn" data-rtl-toggle title="Toggle RTL"><img src="https://img.icons8.com/isometric/30/geography.png" alt="RTL" style="width:20px;height:20px;"></button>
       <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -103,7 +105,7 @@
   <div class="container-xl">
     <div class="row g-5">
       <div class="col-lg-4 col-md-12">
-        <div class="footer-logo"><div class="logo-icon" style="background:transparent;"><img src="https://img.icons8.com/isometric/50/guitar.png" alt="Logo" style="width:100%;height:100%;object-fit:contain;"></div>LuthierTools</div>
+        <div class="footer-logo"><div class="logo-icon"><img src="assets/images/favicon.png" alt="Logo"></div>LuthierTools</div>
         <p class="footer-desc">Premium tools and supplies for master instrument builders. Precision crafted for those who demand the best.</p>
         <div class="footer-social" style="display:flex;gap:12px;margin-top:20px;">
           <a href="#" class="soc-link"><img src="https://img.icons8.com/isometric/30/instagram.png" alt="IG" style="width:20px;"></a>
@@ -122,7 +124,7 @@
       <div style="display:flex;gap:20px;align-items:center;">
         <a href="#" style="font-size:0.85rem;color:rgba(255,255,255,.38);">Privacy</a>
         <a href="#" style="font-size:0.85rem;color:rgba(255,255,255,.38);">Terms</a>
-        <button data-rtl-toggle style="background:none;border:none;color:rgba(255,255,255,.38);font-size:.8rem;cursor:pointer;">RTL</button>
+        <button data-rtl-toggle class="footer-rtl-btn" title="Toggle RTL"><img src="https://img.icons8.com/isometric/30/geography.png" alt="RTL" style="width:16px;height:16px;"> <span>RTL</span></button>
       </div>
     </div>
   </div>
