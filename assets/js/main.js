@@ -36,11 +36,7 @@ const Theme = {
       if(el.type === 'checkbox') {
         el.checked = isDark;
       } else {
-        const img = el.querySelector('.theme-ico img') || el.querySelector('img');
-        if(img) {
-          img.src = isDark ? 'https://img.icons8.com/isometric/30/sun.png' : 'https://img.icons8.com/isometric/30/moon.png';
-          img.alt = isDark ? 'Sun' : 'Moon';
-        }
+        el.innerHTML = isDark ? '<span class="theme-ico">☀️</span>' : '<span class="theme-ico">🌙</span>';
       }
     });
   }

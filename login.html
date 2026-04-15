@@ -266,17 +266,11 @@
 </head>
 <body>
 
-<div class="rtl-toggle-fixed" style="display:flex;align-items:center;gap:8px;background:var(--surface);padding:8px 12px;border-radius:100px;border:1px solid var(--border);box-shadow:var(--shadow-sm);">
-      <span style="font-size:0.65rem;font-weight:700;color:var(--text-muted);">RTL</span>
-      <label class="tog-sw" title="Toggle RTL">
-        <input type="checkbox" data-rtl-toggle>
-        <span class="tog-sl"></span>
-      </label>
-    </div>
+
 
 
 <div class="auth-card">
-  <a href="index.html" class="logo-container" style="text-decoration: none;"><div class="logo-badge" style="background:var(--secondary); padding:8px;"><img src="assets/images/favicon.png" alt="Logo" style="width:100%;height:100%;object-fit:contain;"></div><div class="logo-text">LuthierTools</div></a>
+  <a href="index.html" class="logo-container" style="text-decoration: none; margin-bottom: 30px;"><img src="assets/images/logo.png" alt="LuthierTools" style="height: 60px; width: auto;"></a>
 
   <h2 class="auth-title">Welcome Back</h2>
   <p class="auth-subtitle">Login to your account to continue</p>
@@ -288,15 +282,16 @@
     </div>
 
     <div class="auth-input-group">
-      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-        <label class="auth-label" style="margin-bottom:0;">Password</label>
-        <a href="#" style="font-size:0.75rem; color:var(--primary-light); font-weight:600;">Forgot?</a>
-      </div>
+      <label class="auth-label">Password</label>
       <div style="position:relative;">
         <input class="auth-input" type="password" id="pwd" placeholder="••••••••" required autocomplete="current-password"/>
         <button type="button" onclick="togglePwd()" style="position:absolute; right:12px; top:50%; transform:translateY(-50%); background:none; border:none; color:rgba(255,255,255,0.4); cursor:pointer;">👁</button>
       </div>
+      <div style="text-align: right; margin-top: 8px;">
+        <a href="#" style="font-size:0.75rem; color:var(--primary-light); font-weight:600;">Forgot Password?</a>
+      </div>
     </div>
+
 
     <div style="display:flex; align-items:center; gap:8px; margin-bottom:28px;">
       <input type="checkbox" id="remember" style="accent-color:var(--primary);"/>
