@@ -275,7 +275,13 @@
 </head>
 <body>
 
-<button class="hdr-btn rtl-toggle-fixed" data-rtl-toggle title="Toggle RTL"><img src="https://img.icons8.com/isometric/30/geography.png" alt="RTL" style="width:20px;height:20px;"></button>
+<div class="rtl-toggle-fixed" style="display:flex;align-items:center;gap:8px;background:var(--surface);padding:8px 12px;border-radius:100px;border:1px solid var(--border);box-shadow:var(--shadow-sm);">
+      <span style="font-size:0.65rem;font-weight:700;color:var(--text-muted);">RTL</span>
+      <label class="tog-sw" title="Toggle RTL">
+        <input type="checkbox" data-rtl-toggle>
+        <span class="tog-sl"></span>
+      </label>
+    </div>
 <button class="hdr-btn theme-toggle-fixed" data-theme-toggle>
   <span class="theme-ico">🌙</span>
 </button>

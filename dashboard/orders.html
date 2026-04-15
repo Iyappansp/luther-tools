@@ -43,7 +43,13 @@
       </div>
       <div class="dash-topbar-actions">
         <button class="topbar-btn" onclick="Toast.show('Notifications')">🔔<span class="notif-dot"></span></button>
-                <button class="topbar-btn" data-rtl-toggle title="Toggle RTL"><img src="https://img.icons8.com/isometric/30/geography.png" alt="RTL" style="width:20px;height:20px;"></button>
+                      <div class="hdr-rtl-wrap" style="display:flex;align-items:center;gap:8px;padding-right:12px;border-right:1px solid var(--border);margin-right:5px;">
+        <span style="font-size:0.7rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.04em;">RTL</span>
+        <label class="tog-sw" title="Toggle RTL">
+          <input type="checkbox" data-rtl-toggle>
+          <span class="tog-sl"></span>
+        </label>
+      </div>
         <button class="topbar-btn" data-theme-toggle><span class="theme-ico">🌙</span></button>
         <a href="../tools.html" class="btn-p" style="padding:8px 18px;font-size:.83rem;text-decoration:none;">+ New Order</a>
       </div>

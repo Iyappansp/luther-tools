@@ -36,7 +36,17 @@ const RTL = {
   init(){
     const isRtl = localStorage.getItem('lt-rtl') === '1';
     if(isRtl) this.on(true);
-    document.querySelectorAll('[data-rtl-toggle]').forEach(b => b.addEventListener('click', () => this.toggle()));
+    document.querySelectorAll('[data-rtl-toggle]').forEach(b => {
+      b.addEventListener('change', (e) => {
+        if(e.target.type === 'checkbox') {
+          e.target.checked ? this.on() : this.off();
+        }
+      });
+      // Also support button clicks
+      if(b.tagName === 'BUTTON' || (b.tagName === 'INPUT' && b.type !== 'checkbox')) {
+        b.addEventListener('click', () => this.toggle());
+      }
+    });
   },
   on(init = false){
     document.body.classList.add('rtl');
@@ -55,8 +65,12 @@ const RTL = {
   toggle(){ document.body.classList.contains('rtl') ? this.off() : this.on(); },
   updateUI(isRtl){
     document.querySelectorAll('[data-rtl-toggle]').forEach(btn => {
-      btn.style.borderColor = isRtl ? 'var(--primary)' : '';
-      btn.style.background = isRtl ? 'rgba(146,64,14,0.05)' : '';
+      if(btn.type === 'checkbox') {
+        btn.checked = isRtl;
+      } else {
+        btn.style.borderColor = isRtl ? 'var(--primary)' : '';
+        btn.style.background = isRtl ? 'rgba(146,64,14,0.05)' : '';
+      }
     });
   }
 };
