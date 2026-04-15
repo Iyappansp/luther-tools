@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Tutorials — LuthierTools</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <link rel="stylesheet" href="assets/css/dark-mode.css"/>
+  <link rel="stylesheet" href="assets/css/rtl.css"/></head><body>
+<header class="site-header">
+  <div class="hdr-inner">
+    <a href="index.html" class="logo-wrap"><div class="logo-icon" style="background:transparent;"><img src="https://img.icons8.com/isometric/50/guitar.png" alt="Logo" style="width:100%;height:100%;object-fit:contain;"></div><span>LuthierTools</span></a>
+    <nav class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="home-2.html">Home v2</a>
+      <a href="tools.html">Tools</a>
+      <a href="supplies.html">Supplies</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="tutorials.html">Tutorials</a>
+      <a href="community.html">Community</a>
+      <a href="contact.html">Contact</a>
+      <div class="hdr-auth-btns" style="display:flex;gap:8px;margin-left:12px;">
+        <a href="login.html" class="nav-login">Login</a>
+        <a href="dashboard/dashboard.html" class="nav-dash">Dashboard</a>
+      </div>
+    </nav>
+    <div class="hdr-actions">
+      <button class="hdr-btn" title="Cart"><img src="https://img.icons8.com/isometric/30/shopping-cart.png" alt="Cart" style="width:20px;height:20px;"><span class="cart-count">0</span></button>
+      <button class="hdr-btn" data-theme-toggle title="Toggle Theme"><span class="theme-ico"><img src="https://img.icons8.com/isometric/30/moon.png" alt="Theme" style="width:20px;height:20px;"></span></button>
+      <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<nav class="mobile-nav">
+  <a href="index.html"><img src="https://img.icons8.com/isometric/30/home.png" style="width:18px;"> Home</a>
+  <a href="tools.html"><img src="https://img.icons8.com/isometric/30/hammer.png" style="width:18px;"> Tools</a>
+  <a href="supplies.html"><img src="https://img.icons8.com/isometric/30/box.png" style="width:18px;"> Supplies</a>
+  <a href="tutorials.html"><img src="https://img.icons8.com/isometric/30/graduation-cap.png" style="width:18px;"> Tutorials</a>
+  <a href="community.html"><img src="https://img.icons8.com/isometric/30/group.png" style="width:18px;"> Community</a>
+  <a href="contact.html"><img src="https://img.icons8.com/isometric/30/phone.png" style="width:18px;"> Contact</a>
+  <a href="dashboard/dashboard.html"><img src="https://img.icons8.com/isometric/30/data-configuration.png" style="width:18px;"> Dashboard</a>
+</nav>
+<div class="page-hero"><div class="container-xl"><h1 class="page-hero-title">🎓 Video Tutorials</h1><p class="page-hero-desc">Learn from master luthiers — 200+ video guides for every skill level</p></div></div>
+<div class="breadcrumb-bar"><div class="container-xl"><div class="breadcrumb-inner"><a href="index.html">Home</a><span>›</span><span>Tutorials</span></div></div></div>
+<section style="padding:50px 0;"><div class="container-xl">
+  <!-- Category Filter -->
+  <div class="filter-bar mb-5">
+    <button class="filter-btn active" data-tcat="all">All Tutorials</button>
+    <button class="filter-btn" data-tcat="basics">🔨 Basics</button>
+    <button class="filter-btn" data-tcat="fretwork">🎸 Fretwork</button>
+    <button class="filter-btn" data-tcat="finishing">🖌️ Finishing</button>
+    <button class="filter-btn" data-tcat="repair">🔧 Repair</button>
+    <button class="filter-btn" data-tcat="building">🪵 Building</button>
+  </div>
+  <!-- Featured Tutorial -->
+  <a href="https://www.youtube.com/watch?v=Fj-E_Ld7g28" target="_blank" class="featured-tutorial fade-up">
+    <div class="row g-0 align-items-center">
+      <div class="col-lg-5">
+        <div class="featured-video-wrap">
+          <img src="https://images.unsplash.com/photo-1541818146-2485501ae11c?q=80&w=1200&auto=format&fit=crop" alt="Fretwork Masterclass Highlights">
+          <div class="big-play-btn">▶</div>
+          <div class="master-badge">⭐ MASTERCLASS</div>
+          <div class="tutorial-duration">41:22</div>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <div class="featured-content">
+          <div class="featured-tag">Masterclass · Fretwork</div>
+          <h3 class="featured-title">Complete Fret Leveling & Crowning Masterclass</h3>
+          <p class="featured-desc">Master the art of high-precision fretwork with David Arroyo. Learn professional techniques for leveling, crowning, and polishing that will transform any instrument's playability.</p>
+          <div class="featured-author">
+            <div class="av">DA</div>
+            <div>
+              <div style="color:#fff;font-weight:600;font-size:1rem;">David Arroyo</div>
+              <div style="color:rgba(255,255,255,.5);font-size:.85rem;">Founder & Master Luthier</div>
+            </div>
+          </div>
+          <div style="display:flex;gap:24px;font-size:.85rem;color:rgba(255,255,255,.5);flex-wrap:wrap;">
+            <span>⏱ 41 min</span>
+            <span>👁 48.2K views</span>
+            <span>⭐ 4.98 rating</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+  <!-- Tutorial Grid -->
+  <div class="row g-4" id="tutorial-grid">
+    <!-- Card 1 -->
+    <div class="col-lg-4 col-md-6 fade-up d1">
+      <a href="https://www.youtube.com/watch?v=M9UuLSTcQkY" target="_blank" class="tutorial-card">
+        <div class="tutorial-img-wrap">
+          <img src="https://images.unsplash.com/photo-1508891015087-dc692986422f?q=80&w=800&auto=format&fit=crop" alt="Workbench Organization">
+          <div class="tutorial-play-btn"><div class="play-icon">▶</div></div>
+          <div class="tutorial-duration">18:32</div>
+        </div>
+        <div class="tutorial-info">
+          <div class="tutorial-cat">Basics</div>
+          <h4 class="tutorial-title">Setting Up Your Luthier Bench</h4>
+          <div class="tutorial-meta">
+            <span>⏱ 18 min</span>
+            <span>👁 12.4K</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-lg-4 col-md-6 fade-up d2">
+      <a href="https://www.youtube.com/watch?v=Fj-E_Ld7g28" target="_blank" class="tutorial-card">
+        <div class="tutorial-img-wrap">
+          <img src="https://images.unsplash.com/photo-1449339968226-7adabe17d190?q=80&w=800&auto=format&fit=crop" alt="Precision Nut Slotting">
+          <div class="tutorial-play-btn"><div class="play-icon">▶</div></div>
+          <div class="tutorial-duration">22:15</div>
+        </div>
+        <div class="tutorial-info">
+          <div class="tutorial-cat">Setup</div>
+          <h4 class="tutorial-title">Nut Slotting Techniques</h4>
+          <div class="tutorial-meta">
+            <span>⏱ 22 min</span>
+            <span>👁 9.8K</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-lg-4 col-md-6 fade-up d3">
+      <a href="https://www.youtube.com/watch?v=V7fAs-j_Dsc" target="_blank" class="tutorial-card">
+        <div class="tutorial-img-wrap">
+          <img src="https://images.unsplash.com/photo-1595113316349-9fa4eb24f884?q=80&w=800&auto=format&fit=crop" alt="Lacquer Spraying">
+          <div class="tutorial-badge badge-pro">Pro</div>
+          <div class="tutorial-play-btn"><div class="play-icon">▶</div></div>
+          <div class="tutorial-duration">28:44</div>
+        </div>
+        <div class="tutorial-info">
+          <div class="tutorial-cat">Finishing</div>
+          <h4 class="tutorial-title">Nitro Lacquer Application</h4>
+          <div class="tutorial-meta">
+            <span>⏱ 28 min</span>
+            <span>👁 18.2K</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="col-lg-4 col-md-6 fade-up d4">
+      <a href="https://www.youtube.com/watch?v=ZfA2t-M9-C4" target="_blank" class="tutorial-card">
+        <div class="tutorial-img-wrap">
+          <img src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?q=80&w=800&auto=format&fit=crop" alt="Internal Bracing Inspection">
+          <div class="tutorial-play-btn"><div class="play-icon">▶</div></div>
+          <div class="tutorial-duration">55:20</div>
+        </div>
+        <div class="tutorial-info">
+          <div class="tutorial-cat">Building</div>
+          <h4 class="tutorial-title">Acoustic Bracing Patterns</h4>
+          <div class="tutorial-meta">
+            <span>⏱ 55 min</span>
+            <span>👁 6.3K</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="col-lg-4 col-md-6 fade-up d5">
+      <a href="https://www.youtube.com/watch?v=S07SWhE_Y28" target="_blank" class="tutorial-card">
+        <div class="tutorial-img-wrap">
+          <img src="https://images.unsplash.com/photo-1516062423079-7ca13cdc7f5a?q=80&w=800&auto=format&fit=crop" alt="Bridge Plate Work">
+          <div class="tutorial-play-btn"><div class="play-icon">▶</div></div>
+          <div class="tutorial-duration">41:08</div>
+        </div>
+        <div class="tutorial-info">
+          <div class="tutorial-cat">Repair</div>
+          <h4 class="tutorial-title">Bridge Plate Repair</h4>
+          <div class="tutorial-meta">
+            <span>⏱ 41 min</span>
+            <span>👁 7.6K</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="col-lg-4 col-md-6 fade-up d1">
+      <a href="https://www.youtube.com/watch?v=P67GqcltNis" target="_blank" class="tutorial-card">
+        <div class="tutorial-img-wrap">
+          <img src="https://images.unsplash.com/photo-1550985543-f47f38aee65e?q=80&w=800&auto=format&fit=crop" alt="Standard Setup">
+          <div class="tutorial-play-btn"><div class="play-icon">▶</div></div>
+          <div class="tutorial-duration">31:55</div>
+        </div>
+        <div class="tutorial-info">
+          <div class="tutorial-cat">Setup</div>
+          <h4 class="tutorial-title">Complete Guitar Setup Guide</h4>
+          <div class="tutorial-meta">
+            <span>⏱ 31 min</span>
+            <span>👁 31.1K</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="col-lg-4 col-md-6 fade-up d2">
+      <a href="https://www.youtube.com/watch?v=VIDEO_CARVING" target="_blank" class="tutorial-card">
+        <div class="tutorial-img-wrap">
+          <img src="https://images.unsplash.com/photo-1603048297172-c92544798d5e?q=80&w=800&auto=format&fit=crop" alt="Violin Scrolling">
+          <div class="tutorial-badge badge-new">New</div>
+          <div class="tutorial-play-btn"><div class="play-icon">▶</div></div>
+          <div class="tutorial-duration">48:30</div>
+        </div>
+        <div class="tutorial-info">
+          <div class="tutorial-cat">Building</div>
+          <h4 class="tutorial-title">Violin Neck Carving</h4>
+          <div class="tutorial-meta">
+            <span>⏱ 48 min</span>
+            <span>👁 4.1K</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- CTA Card -->
+    <div class="col-lg-4 col-md-6 fade-up d3">
+      <div style="background:linear-gradient(135deg,var(--gold),var(--primary));border-radius:var(--radius-lg);display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;min-height:380px;text-align:center;padding:34px;cursor:pointer;box-shadow:var(--shadow-lg);transition:var(--transition);" onmouseenter="this.style.transform='translateY(-8px)';this.style.boxShadow='var(--shadow-xl)'" onmouseleave="this.style.transform='';this.style.boxShadow='var(--shadow-lg)'" onclick="window.location.href='signup.html'">
+        <div style="font-size:3.5rem;margin-bottom:15px;filter:drop-shadow(0 4px 12px rgba(0,0,0,.2));">🔓</div>
+        <h4 style="font-family:var(--font-head);color:#fff;font-size:1.4rem;font-weight:700;margin-bottom:12px;">Unlock 200+ Tutorials</h4>
+        <p style="color:rgba(255,255,255,.8);font-size:.92rem;margin-bottom:24px;line-height:1.6;">Join our Trade Program for exclusive access to advanced building guides.</p>
+        <a href="signup.html" style="background:#fff;color:var(--primary);padding:10px 24px;border-radius:10px;font-weight:700;font-size:1rem;text-decoration:none;transition:var(--transition);" onmouseenter="this.style.transform='scale(1.05)'" onmouseleave="this.style.transform=''">Join Free →</a>
+      </div>
+    </div>
+  </div>
+</div></section>
+<footer class="site-footer">
+  <div class="container-xl">
+    <div class="row g-5">
+      <div class="col-lg-4 col-md-12">
+        <div class="footer-logo"><div class="logo-icon" style="background:transparent;"><img src="https://img.icons8.com/isometric/50/guitar.png" alt="Logo" style="width:100%;height:100%;object-fit:contain;"></div>LuthierTools</div>
+        <p class="footer-desc">Premium tools and supplies for master instrument builders. Precision crafted for those who demand the best.</p>
+        <div class="footer-social" style="display:flex;gap:12px;margin-top:20px;">
+          <a href="#" class="soc-link"><img src="https://img.icons8.com/isometric/30/instagram.png" alt="IG" style="width:20px;"></a>
+          <a href="#" class="soc-link"><img src="https://img.icons8.com/isometric/30/youtube-play.png" alt="YT" style="width:20px;"></a>
+          <a href="#" class="soc-link"><img src="https://img.icons8.com/isometric/30/facebook.png" alt="FB" style="width:20px;"></a>
+          <a href="#" class="soc-link"><img src="https://img.icons8.com/isometric/30/twitter.png" alt="TW" style="width:20px;"></a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-6"><h6 class="footer-heading">Shop</h6><ul class="footer-links"><li><a href="tools.html">Hand Tools</a></li><li><a href="tools.html">Measuring</a></li><li><a href="tools.html">Finishing</a></li><li><a href="supplies.html">Supplies</a></li></ul></div>
+      <div class="col-lg-2 col-md-3 col-6"><h6 class="footer-heading">Company</h6><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="tutorials.html">Tutorials</a></li><li><a href="community.html">Community</a></li></ul></div>
+      <div class="col-lg-2 col-md-3 col-6"><h6 class="footer-heading">Support</h6><ul class="footer-links"><li><a href="contact.html">Contact</a></li><li><a href="#">Shipping</a></li><li><a href="#">Returns</a></li><li><a href="#">Trade FAQ</a></li></ul></div>
+      <div class="col-lg-2 col-md-3 col-6"><h6 class="footer-heading">Account</h6><ul class="footer-links"><li><a href="login.html">Login</a></li><li><a href="signup.html">Sign Up</a></li><li><a href="dashboard/dashboard.html">Dashboard</a></li><li><a href="#">Trade Portal</a></li></ul></div>
+    </div>
+    <div class="footer-bottom" style="margin-top:60px;padding-top:30px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;">
+      <p style="margin:0;font-size:0.85rem;color:rgba(255,255,255,.38);">© 2026 LuthierTools Co. All rights reserved. Craft Better. Build Stronger.</p>
+      <div style="display:flex;gap:20px;align-items:center;">
+        <a href="#" style="font-size:0.85rem;color:rgba(255,255,255,.38);">Privacy</a>
+        <a href="#" style="font-size:0.85rem;color:rgba(255,255,255,.38);">Terms</a>
+        <button data-rtl-toggle style="background:none;border:none;color:rgba(255,255,255,.38);font-size:.8rem;cursor:pointer;">RTL</button>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
+</body></html>

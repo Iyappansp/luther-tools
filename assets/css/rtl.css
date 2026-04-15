@@ -1,0 +1,32 @@
+/* ===== RTL SUPPORT ===== */
+body.rtl,[dir="rtl"]{direction:rtl;text-align:right}
+body.rtl .hdr-inner{flex-direction:row-reverse}
+body.rtl .nav-links{flex-direction:row-reverse}
+body.rtl .logo-wrap{flex-direction:row-reverse}
+body.rtl .hero-actions{flex-direction:row-reverse}
+body.rtl .hero-stats{flex-direction:row-reverse}
+body.rtl .footer-bottom{flex-direction:row-reverse}
+body.rtl .footer-social{flex-direction:row-reverse}
+body.rtl .footer-links a:hover{padding-left:0;padding-right:4px}
+body.rtl .testi-author{flex-direction:row-reverse}
+body.rtl .product-foot{flex-direction:row-reverse}
+body.rtl .product-badge{left:auto;right:12px}
+body.rtl .breadcrumb-inner{flex-direction:row-reverse}
+body.rtl .filter-bar{flex-direction:row-reverse}
+body.rtl .cat-icon{margin:0 auto 18px}
+body.rtl .cart-count{left:-6px;right:auto}
+body.rtl .btn-p,.btn-s,.btn-g,.btn-w{flex-direction:row-reverse}
+body.rtl .mobile-nav a{flex-direction:row-reverse}
+body.rtl .sec-head{text-align:right}
+body.rtl .divider.center{margin:14px 0}
+/* Dashboard RTL */
+body.rtl .dash-layout{flex-direction:row-reverse}
+body.rtl .dash-sidebar{border-right:none;border-left:1px solid var(--border)}
+body.rtl .sb-link{flex-direction:row-reverse}
+body.rtl .sb-link.active{border-left:none;border-right:3px solid var(--primary);padding-right:13px;padding-left:16px}
+body.rtl .d-table{text-align:right}
+body.rtl .d-topbar{flex-direction:row-reverse}
+/* Animations flip */
+body.rtl .slide-left{transform:translateX(38px)}
+body.rtl .slide-right{transform:translateX(-38px)}
+body.rtl .slide-left.visible,body.rtl .slide-right.visible{transform:translateX(0)}

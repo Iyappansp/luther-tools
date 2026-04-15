@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Tool Detail — LuthierTools</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <link rel="stylesheet" href="assets/css/dark-mode.css"/>
+  <link rel="stylesheet" href="assets/css/rtl.css"/></head><body>
+<header class="site-header">
+  <div class="hdr-inner">
+    <a href="index.html" class="logo-wrap"><div class="logo-icon" style="background:transparent;"><img src="https://img.icons8.com/isometric/50/guitar.png" alt="Logo" style="width:100%;height:100%;object-fit:contain;"></div><span>LuthierTools</span></a>
+    <nav class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="home-2.html">Home v2</a>
+      <a href="tools.html">Tools</a>
+      <a href="supplies.html">Supplies</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="tutorials.html">Tutorials</a>
+      <a href="community.html">Community</a>
+      <a href="contact.html">Contact</a>
+      <div class="hdr-auth-btns" style="display:flex;gap:8px;margin-left:12px;">
+        <a href="login.html" class="nav-login">Login</a>
+        <a href="dashboard/dashboard.html" class="nav-dash">Dashboard</a>
+      </div>
+    </nav>
+    <div class="hdr-actions">
+      <button class="hdr-btn" title="Cart"><img src="https://img.icons8.com/isometric/30/shopping-cart.png" alt="Cart" style="width:20px;height:20px;"><span class="cart-count">0</span></button>
+      <button class="hdr-btn" data-theme-toggle title="Toggle Theme"><span class="theme-ico"><img src="https://img.icons8.com/isometric/30/moon.png" alt="Theme" style="width:20px;height:20px;"></span></button>
+      <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<nav class="mobile-nav">
+  <a href="index.html"><img src="https://img.icons8.com/isometric/30/home.png" style="width:18px;"> Home</a>
+  <a href="tools.html"><img src="https://img.icons8.com/isometric/30/hammer.png" style="width:18px;"> Tools</a>
+  <a href="supplies.html"><img src="https://img.icons8.com/isometric/30/box.png" style="width:18px;"> Supplies</a>
+  <a href="tutorials.html"><img src="https://img.icons8.com/isometric/30/graduation-cap.png" style="width:18px;"> Tutorials</a>
+  <a href="community.html"><img src="https://img.icons8.com/isometric/30/group.png" style="width:18px;"> Community</a>
+  <a href="contact.html"><img src="https://img.icons8.com/isometric/30/phone.png" style="width:18px;"> Contact</a>
+  <a href="dashboard/dashboard.html"><img src="https://img.icons8.com/isometric/30/data-configuration.png" style="width:18px;"> Dashboard</a>
+</nav>
+<div class="breadcrumb-bar"><div class="container-xl"><div class="breadcrumb-inner"><a href="index.html">Home</a><span>›</span><a href="tools.html">Tools</a><span>›</span><span id="detail-breadcrumb">Tool Detail</span></div></div></div>
+<section style="padding:50px 0;"><div class="container-xl"><div class="row g-5">
+  <div class="col-lg-5">
+    <div style="background:var(--gray-100);border-radius:18px;overflow:hidden;aspect-ratio:1;display:flex;align-items:center;justify-content:center;position:relative;border:1px solid var(--border);" id="detail-img">
+      <!-- Image populated by shop.js -->
+      <div style="font-size:4rem; opacity:0.1;">🛠️</div>
+    </div>
+    <div style="display:flex;gap:10px;margin-top:14px;">
+      <div style="flex:1;background:var(--gray-100);border-radius:10px;aspect-ratio:1;overflow:hidden;cursor:pointer;border:2px solid var(--primary);"><img src="https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?q=80&w=200&auto=format&fit=crop" style="width:100%;height:100%;object-fit:cover;"></div>
+      <div style="flex:1;background:var(--gray-100);border-radius:10px;aspect-ratio:1;overflow:hidden;cursor:pointer;border:1px solid var(--border);"><img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=200&auto=format&fit=crop" style="width:100%;height:100%;object-fit:cover;"></div>
+      <div style="flex:1;background:var(--gray-100);border-radius:10px;aspect-ratio:1;overflow:hidden;cursor:pointer;border:1px solid var(--border);"><img src="https://images.unsplash.com/photo-1541818146-2485501ae11c?q=80&w=200&auto=format&fit=crop" style="width:100%;height:100%;object-fit:cover;"></div>
+    </div>
+  </div>
+  <div class="col-lg-7">
+    <div id="detail-cat" style="font-size:.72rem;font-weight:700;color:var(--primary);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;">Hand Tools</div>
+    <h1 id="detail-name" style="font-family:var(--font-head);font-size:2.2rem;font-weight:900;color:var(--secondary);margin-bottom:12px;">Precision Fret Saw</h1>
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap;">
+      <span style="color:var(--gold);font-size:.95rem;" id="detail-rating">★★★★★ 4.9 (128 reviews)</span>
+      <span id="detail-stock" class="stock in">● In Stock</span>
+    </div>
+    <div style="font-family:var(--font-head);font-size:2.6rem;font-weight:900;color:var(--primary);margin-bottom:20px;" id="detail-price">$49.99</div>
+    <p id="detail-desc" style="color:var(--text-muted);line-height:1.9;margin-bottom:24px;">Japanese pull-cut saw with 0.6mm kerf and walnut handle, engineered for the exacting demands of fret installation.</p>
+    <div style="background:var(--gray-100);border-radius:12px;padding:18px;margin-bottom:22px;">
+      <h5 style="font-family:var(--font-head);font-size:.95rem;font-weight:700;color:var(--secondary);margin-bottom:12px;">Specifications</h5>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:.85rem;">
+        <div><span style="color:var(--text-muted);">Blade Length:</span> <strong>180mm</strong></div>
+        <div><span style="color:var(--text-muted);">Kerf Width:</span> <strong>0.6mm</strong></div>
+        <div><span style="color:var(--text-muted);">TPI:</span> <strong>32 teeth/inch</strong></div>
+        <div><span style="color:var(--text-muted);">Handle:</span> <strong>Walnut</strong></div>
+        <div><span style="color:var(--text-muted);">Cut Type:</span> <strong>Pull Cut</strong></div>
+        <div><span style="color:var(--text-muted);">Material:</span> <strong>Japanese Steel</strong></div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap;">
+      <div style="display:flex;align-items:center;border:1px solid var(--border);border-radius:8px;overflow:hidden;">
+        <button onclick="const i=document.getElementById('qty');i.value=Math.max(1,+i.value-1)" style="width:40px;height:44px;background:var(--gray-100);border:none;cursor:pointer;font-size:1.1rem;color:var(--text);">−</button>
+        <input id="qty" type="number" value="1" min="1" style="width:48px;height:44px;border:none;text-align:center;font-weight:700;font-size:1rem;background:var(--surface);color:var(--text);outline:none;"/>
+        <button onclick="const i=document.getElementById('qty');i.value=+i.value+1" style="width:40px;height:44px;background:var(--gray-100);border:none;cursor:pointer;font-size:1.1rem;color:var(--text);">+</button>
+      </div>
+      <button id="detail-add-cart" class="btn-p" style="flex:1;justify-content:center;min-width:150px;" data-add-cart data-id="p1" data-name="Precision Fret Saw" data-price="49.99">🛒 Add to Cart</button>
+      <button class="hdr-btn" onclick="Toast.show('❤️ Added to wishlist')" title="Wishlist">❤️</button>
+    </div>
+    <div style="display:flex;gap:18px;font-size:.8rem;color:var(--text-muted);flex-wrap:wrap;">
+      <span>🚚 Free shipping $75+</span><span>↩️ 30-day returns</span><span>🔒 Secure checkout</span>
+    </div>
+  </div>
+</div>
+
+<!-- TABS -->
+<div style="margin-top:60px;">
+  <div style="display:flex;border-bottom:2px solid var(--border);margin-bottom:28px;" id="tab-nav">
+    <button onclick="switchTab('desc',this)" style="padding:13px 22px;border:none;background:transparent;font-weight:600;color:var(--primary);border-bottom:2px solid var(--primary);margin-bottom:-2px;cursor:pointer;font-family:var(--font-body);">Description</button>
+    <button onclick="switchTab('specs',this)" style="padding:13px 22px;border:none;background:transparent;font-weight:600;color:var(--text-muted);cursor:pointer;font-family:var(--font-body);">Specifications</button>
+    <button onclick="switchTab('reviews',this)" style="padding:13px 22px;border:none;background:transparent;font-weight:600;color:var(--text-muted);cursor:pointer;font-family:var(--font-body);">Reviews (128)</button>
+  </div>
+  <div id="tab-desc">
+    <h4 style="font-family:var(--font-head);font-size:1.3rem;color:var(--secondary);margin-bottom:14px;">The Finest Fret Saw You'll Ever Own</h4>
+    <p style="color:var(--text-muted);line-height:1.9;margin-bottom:14px;">Designed in collaboration with working luthiers, the Precision Fret Saw combines centuries of Japanese blade-making tradition with modern luthiery demands. The ultra-thin kerf produces minimal material removal while the fine teeth create edges clean enough to seat frets with no binding.</p>
+    <p style="color:var(--text-muted);line-height:1.9;">The ergonomic walnut handle is shaped for comfort during extended work sessions. The blade is replaceable, making this a lifetime investment for your workshop.</p>
+  </div>
+  <div id="tab-specs" style="display:none;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;">
+      <div style="background:var(--gray-100);border-radius:10px;padding:14px;"><div style="font-size:.74rem;color:var(--text-muted);margin-bottom:4px;">Blade Length</div><div style="font-weight:700;color:var(--secondary);">180mm / 7.1"</div></div>
+      <div style="background:var(--gray-100);border-radius:10px;padding:14px;"><div style="font-size:.74rem;color:var(--text-muted);margin-bottom:4px;">Kerf Width</div><div style="font-weight:700;color:var(--secondary);">0.6mm</div></div>
+      <div style="background:var(--gray-100);border-radius:10px;padding:14px;"><div style="font-size:.74rem;color:var(--text-muted);margin-bottom:4px;">Teeth Per Inch</div><div style="font-weight:700;color:var(--secondary);">32 TPI</div></div>
+      <div style="background:var(--gray-100);border-radius:10px;padding:14px;"><div style="font-size:.74rem;color:var(--text-muted);margin-bottom:4px;">Handle Material</div><div style="font-weight:700;color:var(--secondary);">American Walnut</div></div>
+      <div style="background:var(--gray-100);border-radius:10px;padding:14px;"><div style="font-size:.74rem;color:var(--text-muted);margin-bottom:4px;">Blade Material</div><div style="font-weight:700;color:var(--secondary);">High-Carbon Japanese Steel</div></div>
+      <div style="background:var(--gray-100);border-radius:10px;padding:14px;"><div style="font-size:.74rem;color:var(--text-muted);margin-bottom:4px;">Weight</div><div style="font-weight:700;color:var(--secondary);">148g</div></div>
+    </div>
+  </div>
+  <div id="tab-reviews" style="display:none;">
+    <div style="display:flex;align-items:center;gap:36px;margin-bottom:28px;padding:22px;background:var(--gray-100);border-radius:14px;flex-wrap:wrap;">
+      <div style="text-align:center;flex-shrink:0;"><div style="font-family:var(--font-head);font-size:3.8rem;font-weight:900;color:var(--primary);line-height:1;">4.9</div><div style="color:var(--gold);font-size:1.3rem;">★★★★★</div><div style="font-size:.8rem;color:var(--text-muted);">128 reviews</div></div>
+      <div style="flex:1;min-width:200px;display:flex;flex-direction:column;gap:7px;">
+        <div style="display:flex;align-items:center;gap:10px;"><span style="font-size:.78rem;color:var(--text-muted);width:14px;">5</span><div class="prog-track" style="flex:1;height:7px;"><div class="prog-fill" style="width:82%;"></div></div><span style="font-size:.78rem;color:var(--text-muted);width:32px;">82%</span></div>
+        <div style="display:flex;align-items:center;gap:10px;"><span style="font-size:.78rem;color:var(--text-muted);width:14px;">4</span><div class="prog-track" style="flex:1;height:7px;"><div class="prog-fill" style="width:12%;"></div></div><span style="font-size:.78rem;color:var(--text-muted);width:32px;">12%</span></div>
+        <div style="display:flex;align-items:center;gap:10px;"><span style="font-size:.78rem;color:var(--text-muted);width:14px;">3</span><div class="prog-track" style="flex:1;height:7px;"><div class="prog-fill" style="width:4%;"></div></div><span style="font-size:.78rem;color:var(--text-muted);width:32px;">4%</span></div>
+        <div style="display:flex;align-items:center;gap:10px;"><span style="font-size:.78rem;color:var(--text-muted);width:14px;">2</span><div class="prog-track" style="flex:1;height:7px;"><div class="prog-fill" style="width:2%;"></div></div><span style="font-size:.78rem;color:var(--text-muted);width:32px;">2%</span></div>
+        <div style="display:flex;align-items:center;gap:10px;"><span style="font-size:.78rem;color:var(--text-muted);width:14px;">1</span><div class="prog-track" style="flex:1;height:7px;"><div class="prog-fill" style="width:0%;"></div></div><span style="font-size:.78rem;color:var(--text-muted);width:32px;">0%</span></div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px;">
+      <div style="padding:20px;border:1px solid var(--border);border-radius:12px;"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;flex-wrap:wrap;gap:8px;"><div style="display:flex;align-items:center;gap:10px;"><div class="av">JR</div><div><div class="av-name">James Rodriguez</div><div class="av-role">Classical Guitar Builder, Madrid</div></div></div><span style="color:var(--gold);">★★★★★</span></div><p style="font-size:.88rem;color:var(--text-muted);font-style:italic;line-height:1.75;">Best fret saw I've ever used. The kerf is perfectly consistent and the walnut handle is a joy to hold. Been using it daily for 6 months — zero issues.</p></div>
+      <div style="padding:20px;border:1px solid var(--border);border-radius:12px;"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;flex-wrap:wrap;gap:8px;"><div style="display:flex;align-items:center;gap:10px;"><div class="av">MK</div><div><div class="av-name">Melissa Kwan</div><div class="av-role">Guitar Tech & Luthier, Nashville</div></div></div><span style="color:var(--gold);">★★★★★</span></div><p style="font-size:.88rem;color:var(--text-muted);font-style:italic;line-height:1.75;">The pull-cut action takes a moment to get used to but once you do, you'll never go back. Slot accuracy improved dramatically on my refrets.</p></div>
+      <div style="padding:20px;border:1px solid var(--border);border-radius:12px;"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;flex-wrap:wrap;gap:8px;"><div style="display:flex;align-items:center;gap:10px;"><div class="av">TH</div><div><div class="av-name">Thomas Herr</div><div class="av-role">Violin Maker, Vienna</div></div></div><span style="color:var(--gold);">★★★★★</span></div><p style="font-size:.88rem;color:var(--text-muted);font-style:italic;line-height:1.75;">Worth every penny. The blade replacement system means this is a forever tool. Just ordered my second as a backup.</p></div>
+    </div>
+  </div>
+</div>
+
+</div></section>
+<footer class="site-footer">
+  <div class="container-xl">
+    <div class="row g-5">
+      <div class="col-lg-4 col-md-12">
+        <div class="footer-logo"><div class="logo-icon" style="background:transparent;"><img src="https://img.icons8.com/isometric/50/guitar.png" alt="Logo" style="width:100%;height:100%;object-fit:contain;"></div>LuthierTools</div>
+        <p class="footer-desc">Premium tools and supplies for master instrument builders. Precision crafted for those who demand the best.</p>
+        <div class="footer-social" style="display:flex;gap:12px;margin-top:20px;">
+          <a href="#" class="soc-link"><img src="https://img.icons8.com/isometric/30/instagram.png" alt="IG" style="width:20px;"></a>
+          <a href="#" class="soc-link"><img src="https://img.icons8.com/isometric/30/youtube-play.png" alt="YT" style="width:20px;"></a>
+          <a href="#" class="soc-link"><img src="https://img.icons8.com/isometric/30/facebook.png" alt="FB" style="width:20px;"></a>
+          <a href="#" class="soc-link"><img src="https://img.icons8.com/isometric/30/twitter.png" alt="TW" style="width:20px;"></a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-6"><h6 class="footer-heading">Shop</h6><ul class="footer-links"><li><a href="tools.html">Hand Tools</a></li><li><a href="tools.html">Measuring</a></li><li><a href="tools.html">Finishing</a></li><li><a href="supplies.html">Supplies</a></li></ul></div>
+      <div class="col-lg-2 col-md-3 col-6"><h6 class="footer-heading">Company</h6><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="tutorials.html">Tutorials</a></li><li><a href="community.html">Community</a></li></ul></div>
+      <div class="col-lg-2 col-md-3 col-6"><h6 class="footer-heading">Support</h6><ul class="footer-links"><li><a href="contact.html">Contact</a></li><li><a href="#">Shipping</a></li><li><a href="#">Returns</a></li><li><a href="#">Trade FAQ</a></li></ul></div>
+      <div class="col-lg-2 col-md-3 col-6"><h6 class="footer-heading">Account</h6><ul class="footer-links"><li><a href="login.html">Login</a></li><li><a href="signup.html">Sign Up</a></li><li><a href="dashboard/dashboard.html">Dashboard</a></li><li><a href="#">Trade Portal</a></li></ul></div>
+    </div>
+    <div class="footer-bottom" style="margin-top:60px;padding-top:30px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;">
+      <p style="margin:0;font-size:0.85rem;color:rgba(255,255,255,.38);">© 2026 LuthierTools Co. All rights reserved. Craft Better. Build Stronger.</p>
+      <div style="display:flex;gap:20px;align-items:center;">
+        <a href="#" style="font-size:0.85rem;color:rgba(255,255,255,.38);">Privacy</a>
+        <a href="#" style="font-size:0.85rem;color:rgba(255,255,255,.38);">Terms</a>
+        <button data-rtl-toggle style="background:none;border:none;color:rgba(255,255,255,.38);font-size:.8rem;cursor:pointer;">RTL</button>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/shop.js"></script>
+<script>
+function switchTab(id, btn) {
+  document.querySelectorAll('#tab-nav button').forEach(b => { b.style.color='var(--text-muted)'; b.style.borderBottom='none'; });
+  ['desc','specs','reviews'].forEach(t => document.getElementById('tab-'+t).style.display='none');
+  btn.style.color='var(--primary)'; btn.style.borderBottom='2px solid var(--primary)'; btn.style.marginBottom='-2px';
+  document.getElementById('tab-'+id).style.display='block';
+}
+// CSS fallback for prog-track
+document.querySelectorAll('.prog-track').forEach(t => { t.style.cssText='width:100%;height:7px;background:var(--gray-200);border-radius:4px;overflow:hidden;'; });
+document.querySelectorAll('.prog-fill').forEach(f => { f.style.cssText+='height:100%;border-radius:4px;background:linear-gradient(90deg,var(--primary),var(--gold));'; });
+</script>
+</body></html>

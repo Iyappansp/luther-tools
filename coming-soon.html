@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Coming Soon — LuthierTools</title>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <link rel="stylesheet" href="assets/css/dark-mode.css"/>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{min-height:100vh;background:linear-gradient(135deg,#1F2937 0%,#2D1A08 50%,#78350F 100%);display:flex;align-items:center;justify-content:center;padding:40px 20px;font-family:'Inter',-apple-system,sans-serif;position:relative;overflow:hidden}
+    body::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 60L60 0' stroke='rgba(255,255,255,.02)' stroke-width='1'/%3E%3C/svg%3E")}
+    .cs-wrap{position:relative;z-index:2;max-width:660px;width:100%;text-align:center}
+    .cs-logo{display:inline-flex;align-items:center;gap:12px;font-family:'Playfair Display',Georgia,serif;font-size:1.35rem;font-weight:700;color:#fff;text-decoration:none;margin-bottom:56px}
+    .cs-logo-icon{width:46px;height:46px;background:#92400E;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:1.3rem}
+    .cs-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(146,64,14,.28);border:1px solid rgba(146,64,14,.5);color:#FCD34D;padding:6px 16px;border-radius:100px;font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:26px}
+    .cs-title{font-family:'Playfair Display',Georgia,serif;font-size:clamp(2.5rem,7vw,5rem);font-weight:900;color:#fff;line-height:1.05;margin-bottom:18px}
+    .cs-title em{color:#FCD34D;font-style:italic}
+    .cs-desc{color:rgba(255,255,255,.62);font-size:1rem;line-height:1.85;max-width:500px;margin:0 auto 48px}
+    .countdown{display:flex;gap:14px;justify-content:center;margin-bottom:48px;flex-wrap:wrap}
+    .cd-box{background:rgba(255,255,255,.08);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:22px 28px;min-width:80px}
+    .cd-num{font-family:'Playfair Display',Georgia,serif;font-size:3rem;font-weight:900;color:#fff;line-height:1;display:block}
+    .cd-lbl{font-size:.68rem;color:rgba(255,255,255,.48);font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-top:5px;display:block}
+    .cs-email-row{display:flex;justify-content:center;margin-bottom:28px}
+    .cs-input{padding:13px 18px;border:1px solid rgba(255,255,255,.2);border-radius:var(--radius) 0 0 var(--radius);background:rgba(255,255,255,.08);backdrop-filter:blur(8px);color:#fff;font-family:inherit;font-size:.9rem;outline:none;min-width:260px;flex:1;max-width:320px}
+    .cs-input::placeholder{color:rgba(255,255,255,.42)}
+    .cs-btn{padding:13px 22px;background:#92400E;color:#fff;border:none;border-radius:0 var(--radius) var(--radius) 0;font-weight:700;cursor:pointer;font-family:inherit;font-size:.88rem;transition:background .3s;white-space:nowrap}
+    .cs-btn:hover{background:#78350F}
+    .cs-note{color:rgba(255,255,255,.38);font-size:.76rem;margin-bottom:38px}
+    .prog-wrap{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:18px 26px;margin-bottom:36px}
+    .prog-hdr{display:flex;justify-content:space-between;margin-bottom:8px;font-size:.78rem;color:rgba(255,255,255,.55)}
+    .prog-bar{background:rgba(255,255,255,.1);border-radius:4px;height:7px;overflow:hidden}
+    .prog-bar-fill{height:100%;background:linear-gradient(90deg,#92400E,#D97706);border-radius:4px;width:84%;animation:growBar 2s ease-out both}
+    @keyframes growBar{from{width:0}to{width:84%}}
+    .prog-milestones{display:flex;justify-content:space-between;margin-top:12px;font-size:.74rem;color:rgba(255,255,255,.48)}
+    .cs-links{display:flex;gap:18px;justify-content:center;flex-wrap:wrap}
+    .cs-links a{color:rgba(255,255,255,.42);font-size:.83rem;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.2);padding-bottom:2px;transition:color .3s}
+    .cs-links a:hover{color:rgba(255,255,255,.8)}
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;600;700&display=swap"/>
+</head>
+<body>
+<div class="cs-wrap">
+
+  <a href="index.html" class="cs-logo">
+    <div class="cs-logo-icon">🎸</div>
+    LuthierTools
+  </a>
+
+  <div class="cs-badge">✦ Something Big Is Coming</div>
+
+  <h1 class="cs-title">
+    Master Builder<br>
+    Collection <em>2026</em>
+  </h1>
+
+  <p class="cs-desc">
+    We're putting the final touches on our most comprehensive luthier tool release ever.
+    60+ new tools, redesigned catalog, and a brand-new trade portal — launching soon.
+  </p>
+
+  <div class="countdown">
+    <div class="cd-box"><span class="cd-num" id="cd-d">14</span><span class="cd-lbl">Days</span></div>
+    <div class="cd-box"><span class="cd-num" id="cd-h">08</span><span class="cd-lbl">Hours</span></div>
+    <div class="cd-box"><span class="cd-num" id="cd-m">32</span><span class="cd-lbl">Minutes</span></div>
+    <div class="cd-box"><span class="cd-num" id="cd-s">00</span><span class="cd-lbl">Seconds</span></div>
+  </div>
+
+  <div class="cs-email-row">
+    <input class="cs-input" type="email" placeholder="your@email.com — notify me on launch"/>
+    <button class="cs-btn" onclick="notifyMe(this)">Notify Me →</button>
+  </div>
+
+  <p class="cs-note">No spam. Unsubscribe anytime. Launch subscribers get 20% off first order.</p>
+
+  <div class="prog-wrap">
+    <div class="prog-hdr"><span>Development Progress</span><span>84%</span></div>
+    <div class="prog-bar"><div class="prog-bar-fill"></div></div>
+    <div class="prog-milestones">
+      <span>✅ Design</span><span>✅ Testing</span><span>✅ Inventory</span><span>⏳ Launch</span>
+    </div>
+  </div>
+
+  <div class="cs-links">
+    <a href="index.html">← Main Site</a>
+    <a href="tools.html">Current Catalog</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="login.html">Trade Login</a>
+  </div>
+
+</div>
+
+<script>
+const target = new Date(Date.now() + 14*24*60*60*1000);
+function tick(){
+  const d = target - Date.now();
+  if(d<=0) return;
+  const pad = n => String(Math.floor(n)).padStart(2,'0');
+  document.getElementById('cd-d').textContent = pad(d/86400000);
+  document.getElementById('cd-h').textContent = pad((d%86400000)/3600000);
+  document.getElementById('cd-m').textContent = pad((d%3600000)/60000);
+  document.getElementById('cd-s').textContent = pad((d%60000)/1000);
+}
+tick(); setInterval(tick, 1000);
+function notifyMe(btn){
+  btn.textContent="✓ You're on the list!";
+  btn.style.background='#059669';
+  setTimeout(()=>{btn.textContent='Notify Me →';btn.style.background='';},3500);
+}
+// Apply saved theme
+const t=localStorage.getItem('lt-theme');
+if(t==='dark') document.body.style.filter='none'; // already dark bg
+</script>
+</body>
+</html>

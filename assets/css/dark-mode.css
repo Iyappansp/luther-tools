@@ -1,0 +1,366 @@
+/* ===== DARK MODE ===== */
+body.dark {
+  --bg: #0b0d11;
+  --surface: #151921;
+  --surface-hover: #1c222d;
+  --text: #f8fafc;
+  --text-muted: #94a3b8;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-focus: rgba(146, 64, 14, 0.4);
+  --gray-100: #10141d;
+  --gray-200: #1a1f29;
+  --gray-300: #2d3748;
+  --secondary: #0f1115;
+  --accent: #d97706;
+  --accent-light: #fbbf24;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.5);
+  --shadow: 0 4px 20px rgba(0,0,0,0.6);
+  --shadow-lg: 0 12px 48px rgba(0,0,0,0.7);
+  --shadow-xl: 0 24px 80px rgba(0,0,0,0.8);
+  background-color: var(--bg);
+}
+
+body.dark .site-header {
+  background: rgba(21, 25, 33, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+body.dark .mobile-nav {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+}
+
+body.dark .mobile-nav a {
+  color: var(--text);
+}
+
+body.dark .mobile-nav a:hover {
+  background: var(--surface-hover);
+}
+
+body.dark .hdr-btn {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+body.dark .hdr-btn:hover {
+  background: var(--surface-hover);
+  border-color: rgba(255,255,255,0.15);
+}
+
+body.dark .product-card,
+body.dark .cat-card,
+body.dark .testi-card,
+body.dark .d-card,
+body.dark .d-stat {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+body.dark .product-card:hover,
+body.dark .cat-card:hover {
+  background: var(--surface-hover);
+  border-color: var(--border-focus);
+  transform: translateY(-4px);
+}
+
+body.dark .product-img {
+  background: #000;
+  border-bottom: 1px solid var(--border);
+}
+
+body.dark .filter-bar {
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+body.dark .filter-btn {
+  background: var(--gray-200);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+}
+
+body.dark .filter-btn:hover,
+body.dark .filter-btn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+body.dark .search-box {
+  background: var(--gray-200);
+  border: 1px solid var(--border);
+}
+
+body.dark .search-box input {
+  color: var(--text);
+}
+
+body.dark h1, body.dark h2, body.dark h3, body.dark h4, body.dark h5, body.dark h6 {
+  color: var(--text);
+}
+
+body.dark .logo-wrap {
+  color: var(--gold-light);
+}
+
+body.dark .nav-links a {
+  color: var(--text-muted);
+}
+
+body.dark .nav-links a:hover,
+body.dark .nav-links a.active {
+  color: var(--gold-light);
+}
+
+body.dark .sec-title,
+body.dark .product-name,
+body.dark .cat-name,
+body.dark .av-name {
+  color: var(--text);
+}
+
+body.dark .breadcrumb-bar {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+body.dark select,
+body.dark input,
+body.dark textarea {
+  background: var(--gray-200);
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+body.dark select:focus,
+body.dark input:focus,
+body.dark textarea:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+/* Dashboard Specific */
+body.dark .dash-sidebar {
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+}
+
+body.dark .dash-topbar {
+  background: rgba(21, 25, 33, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+body.dark .d-table {
+  background: transparent;
+}
+
+body.dark .d-table th {
+  background: var(--gray-200);
+  color: var(--text-muted);
+  border-color: var(--border);
+}
+
+body.dark .d-table td {
+  border-color: var(--border);
+  color: var(--text);
+}
+
+body.dark .d-table tr:hover td {
+  background: var(--surface-hover);
+}
+
+body.dark .sb-link {
+  color: var(--text-muted);
+}
+
+body.dark .sb-link:hover,
+body.dark .sb-link.active {
+  background: rgba(146, 64, 14, 0.15);
+  color: var(--gold-light);
+}
+
+body.dark .topbar-btn {
+  background: var(--gray-200);
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+body.dark .prog-track {
+  background: var(--gray-300);
+}
+
+body.dark .settings-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+body.dark .settings-row {
+  border-color: var(--border);
+}
+
+body.dark .toggle-slider {
+  background: var(--gray-300);
+}
+
+body.dark .forum-card,
+body.dark .sw-widget,
+body.dark .contact-card,
+body.dark .t-card,
+body.dark .auth-right {
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+body.dark .social-btn {
+  background: var(--gray-200);
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+body.dark .tier-opt {
+  border-color: var(--border);
+}
+
+body.dark .tier-opt.sel {
+  background: rgba(146, 64, 14, 0.1);
+  border-color: var(--primary);
+}
+
+body.dark .gallery-item {
+  background: var(--gray-200);
+  border: 1px solid var(--border);
+}
+
+body.dark .site-footer {
+  background: #080a0e;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+}
+
+body.dark .footer-logo,
+body.dark .footer-heading {
+  color: var(--text);
+}
+
+body.dark .footer-links a,
+body.dark .footer-desc {
+  color: var(--text-muted);
+}
+
+body.dark .footer-links a:hover {
+  color: var(--gold-light);
+}
+
+body.dark .soc-link {
+  background: var(--gray-200);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+}
+
+body.dark .soc-link:hover {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+body.dark .footer-bottom {
+  border-top-color: var(--border);
+}
+
+body.dark .footer-bottom p,
+body.dark .footer-bottom a {
+  color: var(--text-muted);
+  opacity: 0.6;
+}
+
+body.dark .bg-alt {
+  background-color: #0d1017;
+}
+
+body.dark .sec-tag {
+  background: rgba(146, 64, 14, 0.15);
+  color: var(--gold-light);
+  border: 1px solid rgba(146, 64, 14, 0.2);
+}
+
+body.dark .product-badge {
+  background: var(--primary);
+  box-shadow: 0 4px 12px rgba(146, 64, 14, 0.3);
+}
+
+body.dark .stock.in {
+  background: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+}
+
+body.dark .ov-btn {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+body.dark .ov-btn:hover {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+body.dark .float-badge {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+}
+
+body.dark .divider {
+  background: linear-gradient(90deg, var(--primary), var(--gold));
+}
+
+body.dark .tutorial-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: var(--shadow-lg);
+}
+
+body.dark .tutorial-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--primary-light);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+
+body.dark .tutorial-title {
+  color: #fff;
+}
+
+body.dark .tutorial-meta {
+  border-top-color: rgba(255, 255, 255, 0.08);
+  color: var(--text-muted);
+}
+
+body.dark .play-icon {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+body.dark .tutorial-card:hover .play-icon {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+body.dark .testi-quote {
+  opacity: 0.3;
+}
+
+body.dark ::selection {
+  background: var(--primary);
+  color: #fff;
+}
+
