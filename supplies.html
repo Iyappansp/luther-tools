@@ -33,10 +33,15 @@
       <div class="hdr-actions">
         <button class="hdr-btn" title="Cart"><img src="https://img.icons8.com/isometric/30/shopping-cart.png" alt="Cart"
             style="width:20px;height:20px;"><span class="cart-count">0</span></button>
-        <button class="hdr-btn" data-theme-toggle title="Toggle Theme"><span class="theme-ico"><img
-              src="https://img.icons8.com/isometric/30/moon.png" alt="Theme"
-              style="width:20px;height:20px;"></span></button>
-                    <div class="hdr-rtl-wrap" style="display:flex;align-items:center;gap:8px;padding-right:12px;border-right:1px solid var(--border);margin-right:5px;">
+        
+                    <div class="hdr-theme-wrap" style="display:flex;align-items:center;gap:8px;padding-right:12px;border-right:1px solid var(--border);margin-right:5px;">
+        <span style="font-size:0.7rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.04em;">Dark</span>
+        <label class="tog-sw" title="Toggle Theme">
+          <input type="checkbox" data-theme-toggle>
+          <span class="tog-sl"></span>
+        </label>
+      </div>
+      <div class="hdr-rtl-wrap" style="display:flex;align-items:center;gap:8px;padding-right:12px;border-right:1px solid var(--border);margin-right:5px;">
         <span style="font-size:0.7rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.04em;">RTL</span>
         <label class="tog-sw" title="Toggle RTL">
           <input type="checkbox" data-rtl-toggle>

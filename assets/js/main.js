@@ -8,27 +8,42 @@ const Theme = {
   init(){
     const s = localStorage.getItem('lt-theme') || 'light';
     s === 'dark' ? this.dark() : this.light();
-    document.querySelectorAll('[data-theme-toggle]').forEach(b => b.addEventListener('click', () => this.toggle()));
+    document.querySelectorAll('[data-theme-toggle]').forEach(b => {
+      if(b.tagName === 'INPUT' && b.type === 'checkbox') {
+        b.addEventListener('change', (e) => {
+          e.target.checked ? this.dark() : this.light();
+        });
+      } else {
+        b.addEventListener('click', () => this.toggle());
+      }
+    });
   },
   dark(){
     document.body.classList.add('dark');
     document.body.classList.remove('light');
     localStorage.setItem('lt-theme','dark');
-    document.querySelectorAll('.theme-ico img').forEach(img => {
-      img.src = 'https://img.icons8.com/isometric/30/sun.png';
-      img.alt = 'Sun';
-    });
+    this.updateUI(true);
   },
   light(){
     document.body.classList.remove('dark');
     document.body.classList.add('light');
     localStorage.setItem('lt-theme','light');
-    document.querySelectorAll('.theme-ico img').forEach(img => {
-      img.src = 'https://img.icons8.com/isometric/30/moon.png';
-      img.alt = 'Moon';
-    });
+    this.updateUI(false);
   },
-  toggle(){ document.body.classList.contains('dark') ? this.light() : this.dark(); }
+  toggle(){ document.body.classList.contains('dark') ? this.light() : this.dark(); },
+  updateUI(isDark){
+    document.querySelectorAll('[data-theme-toggle]').forEach(el => {
+      if(el.type === 'checkbox') {
+        el.checked = isDark;
+      } else {
+        const img = el.querySelector('.theme-ico img') || el.querySelector('img');
+        if(img) {
+          img.src = isDark ? 'https://img.icons8.com/isometric/30/sun.png' : 'https://img.icons8.com/isometric/30/moon.png';
+          img.alt = isDark ? 'Sun' : 'Moon';
+        }
+      }
+    });
+  }
 };
 
 /* ── RTL ENGINE ───────────────────────────── */
