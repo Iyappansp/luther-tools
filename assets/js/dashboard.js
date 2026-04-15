@@ -91,11 +91,16 @@ function renderTutorials(){
     const btnLabel = t.prog===0 ? 'Start Tutorial' : t.prog===100 ? '✓ Watch Again' : `Continue — ${t.prog}%`;
     const btnBg = t.prog===100 ? 'var(--gray-200)' : 'var(--primary)';
     const btnColor = t.prog===100 ? 'var(--text-muted)' : '#fff';
+    const catImg = t.cat === 'Basics' ? '../assets/images/cat_hand_tools.png' : 
+                   t.cat === 'Fretwork' ? '../assets/images/cat_fretwire.png' :
+                   t.cat === 'Finishing' ? '../assets/images/cat_finishing.png' :
+                   '../assets/images/cat_hardware.png';
     return `<div class="t-card" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:var(--transition);" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-lg)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
-      <div style="background:linear-gradient(135deg,var(--secondary),var(--primary-dark));height:130px;display:flex;align-items:center;justify-content:center;font-size:2.8rem;position:relative;">
-        ${t.icon}
-        ${t.prog===100 ? '<div style="position:absolute;top:10px;right:10px;background:#059669;color:#fff;font-size:.67rem;font-weight:700;padding:3px 9px;border-radius:100px;">✓ Done</div>' : ''}
-        ${t.prog>0 && t.prog<100 ? `<div style="position:absolute;top:10px;right:10px;background:rgba(0,0,0,.5);color:#fff;font-size:.67rem;font-weight:700;padding:3px 9px;border-radius:100px;">${t.prog}%</div>` : ''}
+      <div style="height:130px;position:relative;overflow:hidden;">
+        <img src="${catImg}" style="width:100%;height:100%;object-fit:cover;opacity:0.75;">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(0,0,0,0.8), transparent);display:flex;align-items:center;justify-content:center;font-size:2.5rem;">${t.icon}</div>
+        ${t.prog===100 ? '<div style="position:absolute;top:10px;right:10px;background:#059669;color:#fff;font-size:.67rem;font-weight:700;padding:3px 9px;border-radius:100px;z-index:2;">✓ Done</div>' : ''}
+        ${t.prog>0 && t.prog<100 ? `<div style="position:absolute;top:10px;right:10px;background:rgba(0,0,0,.5);color:#fff;font-size:.67rem;font-weight:700;padding:3px 9px;border-radius:100px;z-index:2;">${t.prog}%</div>` : ''}
       </div>
       <div style="padding:16px;">
         <div style="font-size:.69rem;font-weight:700;color:var(--primary);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;">${t.cat}</div>
@@ -225,4 +230,61 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.topbar-btn[data-theme-toggle]').forEach(btn => {
     btn.addEventListener('click', () => { setTimeout(renderChart, 120); });
   });
+  initLogout();
 });
+
+/* ── LOGOUT CONFIRMATION ──────────────────── */
+function initLogout() {
+  const logoutLinks = document.querySelectorAll('.sb-link.logout');
+  
+  // Create Modal HTML
+  const modalHTML = `
+    <div class="modal-overlay" id="logoutModal">
+      <div class="confirm-modal">
+        <div class="modal-icon">🚪</div>
+        <h3 class="modal-title">Ready to Leave?</h3>
+        <p class="modal-text">Are you sure you want to log out of your LuthierTools account? You'll need to sign in again to access your dashboard.</p>
+        <div class="modal-btns">
+          <button class="modal-btn btn-stay" id="stayBtn">Stay Here</button>
+          <button class="modal-btn btn-logout" id="confirmLogoutBtn">Yes, Logout</button>
+        </div>
+      </div>
+    </div>
+  `;
+  
+  // Inject modal if not exists
+  if (!document.getElementById('logoutModal')) {
+    document.body.insertAdjacentHTML('beforeend', modalHTML);
+  }
+
+  const modal = document.getElementById('logoutModal');
+  const stayBtn = document.getElementById('stayBtn');
+  const confirmBtn = document.getElementById('confirmLogoutBtn');
+
+  logoutLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      modal.classList.add('show');
+    });
+  });
+
+  stayBtn.addEventListener('click', () => {
+    modal.classList.remove('show');
+  });
+
+  confirmBtn.addEventListener('click', () => {
+    // Premium feedback before redirect
+    confirmBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Logging out...';
+    confirmBtn.style.opacity = '0.7';
+    confirmBtn.disabled = true;
+    
+    setTimeout(() => {
+      window.location.href = '../index.html'; // Go to index page as requested
+    }, 800);
+  });
+
+  // Close on outside click
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) modal.classList.remove('show');
+  });
+}

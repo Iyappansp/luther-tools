@@ -13,7 +13,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(135deg, #92400E 0%, #1F2937 100%);
+      background: linear-gradient(135deg, #92400E 0%, #1F2937 100%) fixed;
       padding: 40px 20px;
       position: relative;
     }
@@ -207,6 +207,57 @@
     }
     .submit-btn:hover { background: var(--primary-dark); transform: translateY(-2px); }
 
+    .divider-text {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-top: 24px;
+      margin-bottom: 24px;
+      color: rgba(255, 255, 255, 0.3);
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .divider-text::before,
+    .divider-text::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .social-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .social-btn {
+      width: 100%;
+      height: 48px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .social-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .social-btn svg {
+      width: 18px;
+      height: 18px;
+    }
+
     .theme-toggle-fixed { position: fixed; top: 24px; right: 24px; z-index: 100; }
 
     /* Light Mode */
@@ -227,11 +278,13 @@
 </button>
 
 <div class="auth-card">
-  <div class="logo-container">
+  <a href="index.html" class="logo-container" style="text-decoration: none;">
     <div class="logo-badge">🎸</div>
-    <h1 class="auth-title">Create Trade Account</h1>
-    <p class="auth-subtitle">Join our community of master builders</p>
-  </div>
+    <div style="font-family: var(--font-head); font-size: 1.4rem; font-weight: 800; color: #fff;">LuthierTools</div>
+  </a>
+
+  <h1 class="auth-title">Create Trade Account</h1>
+  <p class="auth-subtitle">Join our community of master builders</p>
 
   <div class="steps-nav">
     <div class="step-item active" id="si1">
@@ -250,26 +303,6 @@
 
   <!-- STEP 1 -->
   <div id="step1">
-    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; margin-bottom:24px;">
-      <button class="social-btn" style="margin-bottom:0; font-size:0.75rem; height:44px;" onclick="Toast.show('Google signup...')">
-        <svg width="16" height="16" viewBox="0 0 48 48"><path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24s8.955,20,20,20s20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"></path><path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"></path><path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"></path><path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"></path></svg>
-        Google
-      </button>
-      <button class="social-btn" style="margin-bottom:0; font-size:0.75rem; height:44px;" onclick="Toast.show('Apple signup...')">
-        <svg width="16" height="16" viewBox="0 0 384 512" fill="currentColor"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
-        Apple
-      </button>
-      <button class="social-btn" style="margin-bottom:0; font-size:0.75rem; height:44px;" onclick="Toast.show('Facebook signup...')">
-        <svg width="16" height="16" viewBox="0 0 24 24"><path fill="#1877F2" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-        Facebook
-      </button>
-    </div>
-
-    <div class="divider-text" style="display:flex; align-items:center; gap:10px; margin-bottom:20px; color:rgba(255,255,255,0.2); font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:1px;">
-      <div style="flex:1; height:1px; background:rgba(255,255,255,0.1);"></div>
-      or signup with email
-      <div style="flex:1; height:1px; background:rgba(255,255,255,0.1);"></div>
-    </div>
     <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
       <div><label class="auth-label">First Name</label><input class="auth-input" type="text" placeholder="David"/></div>
       <div><label class="auth-label">Last Name</label><input class="auth-input" type="text" placeholder="Arroyo"/></div>
@@ -330,6 +363,29 @@
       <button class="submit-btn" style="background:var(--secondary);" onclick="gotoStep(2)">← Back</button>
       <button class="submit-btn" onclick="doSignup(this)">Complete 🎸</button>
     </div>
+  </div>
+
+  <div class="divider-text">Or sign up with</div>
+
+  <div class="social-grid">
+    <button class="social-btn" title="Sign up with Google">
+      <svg viewBox="0 0 24 24">
+        <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+        <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+        <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/>
+        <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+      </svg>
+    </button>
+    <button class="social-btn" title="Sign up with Apple">
+      <svg viewBox="0 0 24 24">
+        <path fill="#fff" d="M17.05 20.28c-.96.95-2.04 1.72-3.3 1.72-1.22 0-1.61-.75-3.1-.75-1.47 0-1.92.73-3.08.75-1.28.02-2.52-.89-3.51-2.04C2.04 17.65 1 14.96 1 12.19c0-4.32 2.72-6.58 5.39-6.58 1.41 0 2.6.93 3.47.93.84 0 2.22-.96 3.75-.96 1.11 0 2.5.51 3.4 1.5-3.04 1.78-2.54 6.27.44 7.64-.81 2.05-1.89 4.04-3.4 5.56zM13.29 4.24c-.21-2.45 1.96-4.49 4.09-4.24.26 2.5-2.13 4.67-4.09 4.24z"/>
+      </svg>
+    </button>
+    <button class="social-btn" title="Sign up with Facebook">
+      <svg viewBox="0 0 24 24">
+        <path fill="#1877F2" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+      </svg>
+    </button>
   </div>
 
   <p style="text-align:center; margin-top:24px; font-size:0.85rem; color:rgba(255,255,255,0.4);">
