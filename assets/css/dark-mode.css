@@ -20,6 +20,37 @@ body.dark {
   background-color: var(--bg);
 }
 
+/* Fix for inline secondary text colors in dark mode */
+body.dark [style*="color: var(--secondary)"],
+body.dark [style*="color:var(--secondary)"],
+body.dark [style*="color: var(--secondary);"],
+body.dark [style*="color:var(--secondary);"],
+body.dark [style*="color: #1F2937"],
+body.dark [style*="color:#1F2937"],
+body.dark [style*="color: #1f2937"],
+body.dark [style*="color:#1f2937"] {
+  color: var(--text) !important;
+}
+
+body.dark [style*="color: #D97706"],
+body.dark [style*="color:#D97706"] {
+  color: var(--gold-light) !important;
+}
+
+body.dark [style*="color: #DC2626"],
+body.dark [style*="color:#DC2626"] {
+  color: #ff8a8a !important;
+}
+
+body.dark .divider-text {
+  color: var(--gray-300);
+}
+
+body.dark .divider-text::before,
+body.dark .divider-text::after {
+  background: var(--border);
+}
+
 body.dark .site-header {
   background: rgba(21, 25, 33, 0.85);
   backdrop-filter: blur(12px);
@@ -141,6 +172,17 @@ body.dark .breadcrumb-inner .current::after {
   background: var(--gold-light);
 }
 
+body.dark .dash-topbar-title,
+body.dark .d-card-title,
+body.dark .sb-uname,
+body.dark .d-stat-val,
+body.dark .sb-sec-label,
+body.dark .d-table th,
+body.dark .sb-tier,
+body.dark .d-stat-lbl {
+  color: var(--text) !important;
+}
+
 body.dark select,
 body.dark input,
 body.dark textarea {
@@ -233,6 +275,16 @@ body.dark .social-btn {
   background: var(--gray-200);
   border: 1px solid var(--border);
   color: var(--text);
+}
+
+body.dark .social-btn svg path[fill="#fff"],
+body.dark .social-btn svg path[fill="white"] {
+  fill: var(--text);
+}
+
+body.dark .social-btn:hover {
+  background: var(--surface-hover);
+  border-color: var(--primary);
 }
 
 body.dark .tier-opt {

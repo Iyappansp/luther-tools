@@ -258,9 +258,13 @@
       border-color: var(--border);
       color: var(--text);
     }
-    body.light .divider-text { color: var(--gray-300); }
+    body.light .divider-text { color: var(--text-muted); }
     body.light .divider-text::before,
     body.light .divider-text::after { background: var(--border); }
+    body.light .social-btn { background: #fff; border-color: var(--border); color: var(--text); }
+    body.light .social-btn svg path[fill="#fff"], body.light .social-btn svg path[fill="white"] { fill: #000; }
+    body.light #remember + label { color: var(--text-muted) !important; }
+    body.light .auth-subtitle { color: var(--text-muted); opacity: 0.8; }
   </style>
   <link rel="icon" type="image/png" href="assets/images/favicon.png"/>
 </head>

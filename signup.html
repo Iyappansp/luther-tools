@@ -270,6 +270,13 @@
     body.light .tier-opt { background: var(--gray-100); border-color: var(--border); }
     body.light .tier-opt.sel { background: rgba(146, 64, 14, 0.05); }
     body.light .step-dot { background: var(--gray-200); color: var(--text-muted); }
+    body.light .divider-text { color: var(--text-muted); }
+    body.light .divider-text::before, body.light .divider-text::after { background: var(--border); }
+    body.light .social-btn { background: #fff; border-color: var(--border); color: var(--text); }
+    body.light .social-btn svg path[fill="#fff"], body.light .social-btn svg path[fill="white"] { fill: #000; }
+    body.light .auth-subtitle { color: var(--text-muted); opacity: 0.8; }
+    body.light .auth-card { background: #fff; border-color: rgba(0,0,0,0.08); box-shadow: 0 15px 40px rgba(0,0,0,0.08); }
+    body.light #tos + label { color: var(--text-muted) !important; }
   </style>
   <link rel="icon" type="image/png" href="assets/images/favicon.png"/>
 </head>

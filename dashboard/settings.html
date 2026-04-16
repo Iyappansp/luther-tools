@@ -69,7 +69,7 @@
         <div class="settings-section" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:22px;">
           <div style="padding:18px 22px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:9px;">
             <span style="font-size:1.15rem;">👤</span>
-            <div style="font-family:var(--font-head);font-size:.97rem;font-weight:700;color:var(--secondary);">Profile Information</div>
+            <div style="font-family:var(--font-head);font-size:.97rem;font-weight:700;color:var(--text);">Profile Information</div>
           </div>
           <div style="padding:22px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:18px;flex-wrap:wrap;">
             <div style="width:72px;height:72px;background:linear-gradient(135deg,var(--primary),var(--gold));border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-size:1.8rem;font-weight:800;color:#fff;flex-shrink:0;">DA</div>
@@ -92,12 +92,12 @@
         <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:22px;">
           <div style="padding:18px 22px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:9px;">
             <span style="font-size:1.15rem;">🏆</span>
-            <div style="font-family:var(--font-head);font-size:.97rem;font-weight:700;color:var(--secondary);">Trade Account & Pricing Tier</div>
+            <div style="font-family:var(--font-head);font-size:.97rem;font-weight:700;color:var(--text);">Trade Account & Pricing Tier</div>
           </div>
           <div style="padding:22px;">
             <div style="background:rgba(146,64,14,.07);border:1px solid rgba(146,64,14,.2);border-radius:12px;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;margin-bottom:22px;">
               <div>
-                <div style="font-weight:700;color:var(--secondary);font-size:.97rem;">🏆 Trade Pro — Active</div>
+                <div style="font-weight:700;color:var(--text);font-size:.97rem;">🏆 Trade Pro — Active</div>
                 <div style="font-size:.8rem;color:var(--text-muted);margin-top:3px;">35% discount · Priority support · Net-30 terms</div>
               </div>
               <div style="text-align:right;">
@@ -106,8 +106,8 @@
               </div>
             </div>
             <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
-              <div style="border:1px solid var(--border);border-radius:10px;padding:14px;text-align:center;cursor:pointer;" onclick="Toast.show('Downgrade not recommended!')"><div style="font-weight:700;color:var(--secondary);font-size:.88rem;">Maker</div><div style="font-size:.76rem;color:var(--text-muted);margin:3px 0;">Free</div><div style="font-size:.73rem;color:var(--text-muted);">Basic access</div></div>
-              <div style="border:1px solid var(--border);border-radius:10px;padding:14px;text-align:center;cursor:pointer;" onclick="Toast.show('Downgrade not recommended!')"><div style="font-weight:700;color:var(--secondary);font-size:.88rem;">Professional</div><div style="font-size:.76rem;color:var(--text-muted);margin:3px 0;">$29/mo</div><div style="font-size:.73rem;color:var(--text-muted);">15% discount</div></div>
+              <div style="border:1px solid var(--border);border-radius:10px;padding:14px;text-align:center;cursor:pointer;" onclick="Toast.show('Downgrade not recommended!')"><div style="font-weight:700;color:var(--text);font-size:.88rem;">Maker</div><div style="font-size:.76rem;color:var(--text-muted);margin:3px 0;">Free</div><div style="font-size:.73rem;color:var(--text-muted);">Basic access</div></div>
+              <div style="border:1px solid var(--border);border-radius:10px;padding:14px;text-align:center;cursor:pointer;" onclick="Toast.show('Downgrade not recommended!')"><div style="font-weight:700;color:var(--text);font-size:.88rem;">Professional</div><div style="font-size:.76rem;color:var(--text-muted);margin:3px 0;">$29/mo</div><div style="font-size:.73rem;color:var(--text-muted);">15% discount</div></div>
               <div style="border:2px solid var(--primary);border-radius:10px;padding:14px;text-align:center;background:rgba(146,64,14,.06);"><div style="font-weight:700;color:var(--primary);font-size:.88rem;">Trade Pro ✓</div><div style="font-size:.76rem;color:var(--text-muted);margin:3px 0;">$79/mo</div><div style="font-size:.73rem;color:var(--text-muted);">35% discount</div></div>
             </div>
           </div>
@@ -117,32 +117,32 @@
         <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:22px;">
           <div style="padding:18px 22px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:9px;">
             <span style="font-size:1.15rem;">🔔</span>
-            <div style="font-family:var(--font-head);font-size:.97rem;font-weight:700;color:var(--secondary);">Notification Preferences</div>
+            <div style="font-family:var(--font-head);font-size:.97rem;font-weight:700;color:var(--text);">Notification Preferences</div>
           </div>
           <div style="display:flex;flex-direction:column;">
             <!-- notification rows -->
             <div style="padding:16px 22px;display:flex;align-items:center;justify-content:space-between;gap:14px;border-bottom:1px solid var(--border);flex-wrap:wrap;">
-              <div><div style="font-size:.87rem;font-weight:600;color:var(--secondary);">Order Updates</div><div style="font-size:.77rem;color:var(--text-muted);">Get notified when orders are confirmed, shipped, or delivered</div></div>
+              <div><div style="font-size:.87rem;font-weight:600;color:var(--text);">Order Updates</div><div style="font-size:.77rem;color:var(--text-muted);">Get notified when orders are confirmed, shipped, or delivered</div></div>
               <label class="tog-sw"><input type="checkbox" checked/><span class="tog-sl"></span></label>
             </div>
             <div style="padding:16px 22px;display:flex;align-items:center;justify-content:space-between;gap:14px;border-bottom:1px solid var(--border);flex-wrap:wrap;">
-              <div><div style="font-size:.87rem;font-weight:600;color:var(--secondary);">Low Stock Alerts</div><div style="font-size:.77rem;color:var(--text-muted);">Alert when tracked inventory falls below minimum levels</div></div>
+              <div><div style="font-size:.87rem;font-weight:600;color:var(--text);">Low Stock Alerts</div><div style="font-size:.77rem;color:var(--text-muted);">Alert when tracked inventory falls below minimum levels</div></div>
               <label class="tog-sw"><input type="checkbox" checked/><span class="tog-sl"></span></label>
             </div>
             <div style="padding:16px 22px;display:flex;align-items:center;justify-content:space-between;gap:14px;border-bottom:1px solid var(--border);flex-wrap:wrap;">
-              <div><div style="font-size:.87rem;font-weight:600;color:var(--secondary);">New Tutorial Releases</div><div style="font-size:.77rem;color:var(--text-muted);">Be first to know when new tutorial content is published</div></div>
+              <div><div style="font-size:.87rem;font-weight:600;color:var(--text);">New Tutorial Releases</div><div style="font-size:.77rem;color:var(--text-muted);">Be first to know when new tutorial content is published</div></div>
               <label class="tog-sw"><input type="checkbox" checked/><span class="tog-sl"></span></label>
             </div>
             <div style="padding:16px 22px;display:flex;align-items:center;justify-content:space-between;gap:14px;border-bottom:1px solid var(--border);flex-wrap:wrap;">
-              <div><div style="font-size:.87rem;font-weight:600;color:var(--secondary);">Community Replies</div><div style="font-size:.77rem;color:var(--text-muted);">Notify when someone replies to your posts or mentions you</div></div>
+              <div><div style="font-size:.87rem;font-weight:600;color:var(--text);">Community Replies</div><div style="font-size:.77rem;color:var(--text-muted);">Notify when someone replies to your posts or mentions you</div></div>
               <label class="tog-sw"><input type="checkbox"/><span class="tog-sl"></span></label>
             </div>
             <div style="padding:16px 22px;display:flex;align-items:center;justify-content:space-between;gap:14px;border-bottom:1px solid var(--border);flex-wrap:wrap;">
-              <div><div style="font-size:.87rem;font-weight:600;color:var(--secondary);">Promotional Offers</div><div style="font-size:.77rem;color:var(--text-muted);">Special trade deals, flash sales and exclusive previews</div></div>
+              <div><div style="font-size:.87rem;font-weight:600;color:var(--text);">Promotional Offers</div><div style="font-size:.77rem;color:var(--text-muted);">Special trade deals, flash sales and exclusive previews</div></div>
               <label class="tog-sw"><input type="checkbox" checked/><span class="tog-sl"></span></label>
             </div>
             <div style="padding:16px 22px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;">
-              <div><div style="font-size:.87rem;font-weight:600;color:var(--secondary);">Weekly Digest</div><div style="font-size:.77rem;color:var(--text-muted);">Summary of community activity and new products every Monday</div></div>
+              <div><div style="font-size:.87rem;font-weight:600;color:var(--text);">Weekly Digest</div><div style="font-size:.77rem;color:var(--text-muted);">Summary of community activity and new products every Monday</div></div>
               <label class="tog-sw"><input type="checkbox"/><span class="tog-sl"></span></label>
             </div>
           </div>
@@ -152,16 +152,16 @@
         <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:22px;">
           <div style="padding:18px 22px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:9px;">
             <span style="font-size:1.15rem;">🎨</span>
-            <div style="font-family:var(--font-head);font-size:.97rem;font-weight:700;color:var(--secondary);">Display Preferences</div>
+            <div style="font-family:var(--font-head);font-size:.97rem;font-weight:700;color:var(--text);">Display Preferences</div>
           </div>
           <div style="display:flex;flex-direction:column;">
             <div style="padding:16px 22px;display:flex;align-items:center;justify-content:space-between;gap:14px;border-bottom:1px solid var(--border);flex-wrap:wrap;">
-              <div><div style="font-size:.87rem;font-weight:600;color:var(--secondary);">Dark Mode</div><div style="font-size:.77rem;color:var(--text-muted);">Switch to the dark workshop interface</div></div>
+              <div><div style="font-size:.87rem;font-weight:600;color:var(--text);">Dark Mode</div><div style="font-size:.77rem;color:var(--text-muted);">Switch to the dark workshop interface</div></div>
               <label class="tog-sw"><input type="checkbox" id="dark-toggle" onchange="document.body.classList.toggle('dark');localStorage.setItem('lt-theme',this.checked?'dark':'light')"/><span class="tog-sl"></span></label>
             </div>
 
             <div style="padding:16px 22px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;">
-              <div><div style="font-size:.87rem;font-weight:600;color:var(--secondary);">Currency</div><div style="font-size:.77rem;color:var(--text-muted);">Display prices in your preferred currency</div></div>
+              <div><div style="font-size:.87rem;font-weight:600;color:var(--text);">Currency</div><div style="font-size:.77rem;color:var(--text-muted);">Display prices in your preferred currency</div></div>
               <select class="d-input" style="width:140px;">
                 <option>USD ($)</option><option>EUR (€)</option><option>GBP (£)</option>
                 <option>AUD (A$)</option><option>CAD (C$)</option>
@@ -174,19 +174,19 @@
         <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:22px;">
           <div style="padding:18px 22px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:9px;">
             <span style="font-size:1.15rem;">🔒</span>
-            <div style="font-family:var(--font-head);font-size:.97rem;font-weight:700;color:var(--secondary);">Security</div>
+            <div style="font-family:var(--font-head);font-size:.97rem;font-weight:700;color:var(--text);">Security</div>
           </div>
           <div style="display:flex;flex-direction:column;">
             <div style="padding:16px 22px;display:flex;align-items:center;justify-content:space-between;gap:14px;border-bottom:1px solid var(--border);flex-wrap:wrap;">
-              <div><div style="font-size:.87rem;font-weight:600;color:var(--secondary);">Change Password</div><div style="font-size:.77rem;color:var(--text-muted);">Last changed 90 days ago</div></div>
+              <div><div style="font-size:.87rem;font-weight:600;color:var(--text);">Change Password</div><div style="font-size:.77rem;color:var(--text-muted);">Last changed 90 days ago</div></div>
               <button type="button" class="btn-s" style="padding:7px 14px;font-size:.78rem;" onclick="Toast.show('Password reset email sent to david@arroyoguitars.com')">Change Password</button>
             </div>
             <div style="padding:16px 22px;display:flex;align-items:center;justify-content:space-between;gap:14px;border-bottom:1px solid var(--border);flex-wrap:wrap;">
-              <div><div style="font-size:.87rem;font-weight:600;color:var(--secondary);">Two-Factor Authentication</div><div style="font-size:.77rem;color:var(--text-muted);">Add an extra layer of security to your account</div></div>
+              <div><div style="font-size:.87rem;font-weight:600;color:var(--text);">Two-Factor Authentication</div><div style="font-size:.77rem;color:var(--text-muted);">Add an extra layer of security to your account</div></div>
               <button type="button" class="btn-s" style="padding:7px 14px;font-size:.78rem;" onclick="Toast.show('2FA setup wizard launching...')">Enable 2FA</button>
             </div>
             <div style="padding:16px 22px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;">
-              <div><div style="font-size:.87rem;font-weight:600;color:var(--secondary);">Active Sessions</div><div style="font-size:.77rem;color:var(--text-muted);">2 devices currently logged in</div></div>
+              <div><div style="font-size:.87rem;font-weight:600;color:var(--text);">Active Sessions</div><div style="font-size:.77rem;color:var(--text-muted);">2 devices currently logged in</div></div>
               <button type="button" class="btn-s" style="padding:7px 14px;font-size:.78rem;color:#DC2626;border-color:#DC2626;" onclick="Toast.show('All other sessions revoked')">Sign Out Others</button>
             </div>
           </div>
