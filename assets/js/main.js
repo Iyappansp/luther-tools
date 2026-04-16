@@ -200,7 +200,8 @@ const Counter = {
 const ActiveNav = {
   init(){
     const path = location.pathname.split('/').pop() || 'index.html';
-    document.querySelectorAll('.nav-links a,.mobile-nav a').forEach(a => {
+    document.querySelectorAll('.nav-links a, .mobile-nav a').forEach(a => {
+      a.classList.remove('active');
       const href = (a.getAttribute('href')||'').split('/').pop();
       if(href && href === path) a.classList.add('active');
     });
