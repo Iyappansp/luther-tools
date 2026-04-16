@@ -1,20 +1,183 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <meta name="description" content="The story behind LuthierTools — 15 years supplying master instrument builders worldwide."/>
-  <title>About Us — LuthierTools</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
-  <link rel="stylesheet" href="assets/css/style.css"/>
-  <link rel="stylesheet" href="assets/css/dark-mode.css"/>
-  <link rel="stylesheet" href="assets/css/rtl.css"/>  <link rel="icon" type="image/png" href="assets/images/favicon.png"/>
-</head><body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Discover the legacy of LuthierTools — 15 years of precision, passion, and supporting the world's master instrument builders." />
+  <title>About Us | LuthierTools — Precision for Master Builders</title>
+  
+  <!-- Fonts -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  
+  <!-- Core Styles -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/dark-mode.css" />
+  <link rel="stylesheet" href="assets/css/rtl.css" />
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+
+  <style>
+    /* Page Specific Styles */
+    .about-hero {
+      position: relative;
+      height: 60vh;
+      min-height: 500px;
+      display: flex;
+      align-items: center;
+      background: var(--secondary);
+      overflow: hidden;
+      color: #fff;
+    }
+    
+    .about-hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('assets/images/about-hero.png');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.4;
+      transform: scale(1.05);
+      transition: transform 10s ease-out;
+    }
+    
+    .about-hero:hover .about-hero-bg {
+      transform: scale(1);
+    }
+    
+    .about-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(31, 41, 55, 0.9) 0%, rgba(31, 41, 55, 0.4) 100%);
+    }
+
+    body.rtl .about-hero-overlay {
+      background: linear-gradient(to left, rgba(31, 41, 55, 0.9) 0%, rgba(31, 41, 55, 0.4) 100%);
+    }
+
+    .about-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+    }
+
+    .py-120 { padding: 120px 0; }
+    @media (max-width: 768px) {
+      .py-120 { padding: 80px 0; }
+      .about-hero { height: auto; padding: 100px 0; min-height: 400px; }
+      .mission-box { padding: 2.5rem; }
+      .mission-box h2 { font-size: 2.2rem !important; }
+    }
+
+    .stat-card-glass {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      transition: var(--transition);
+    }
+
+    .stat-card-glass:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-5px);
+    }
+
+    .process-step {
+      position: relative;
+      padding: 2rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      height: 100%;
+      transition: var(--transition);
+    }
+
+    .process-step:hover {
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary);
+    }
+
+    .step-num {
+      font-size: 4rem;
+      font-weight: 900;
+      color: var(--primary);
+      opacity: 0.1;
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      line-height: 1;
+    }
+
+    body.rtl .step-num {
+      right: auto;
+      left: 20px;
+    }
+
+    .team-card {
+      text-align: center;
+      padding: 1.5rem;
+    }
+
+    .team-img-wrap {
+      width: 200px;
+      height: 200px;
+      margin: 0 auto 1.5rem;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 4px solid var(--surface);
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+
+    .team-card:hover .team-img-wrap {
+      transform: scale(1.05);
+      border-color: var(--primary);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .team-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .mission-box {
+      background: var(--primary);
+      color: #fff;
+      padding: 4rem;
+      border-radius: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mission-box::after {
+      content: '"';
+      position: absolute;
+      top: -20px;
+      right: 40px;
+      font-size: 15rem;
+      color: rgba(255, 255, 255, 0.1);
+      font-family: var(--font-head);
+    }
+
+    body.rtl .mission-box::after {
+      right: auto;
+      left: 40px;
+    }
+  </style>
+</head>
+<body class="light">
 
 <header class="site-header">
   <div class="hdr-inner">
-    <a href="index.html" class="logo-wrap"><img src="assets/images/logo.png" alt="LuthierTools" class="main-logo"></a>
+    <a href="index.html" class="logo-wrap">
+      <img src="assets/images/logo.png" alt="LuthierTools" class="main-logo">
+    </a>
+    
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="home-2.html">Home v2</a>
+      <a href="about.html">About</a>
       <a href="tools.html">Tools</a>
       <a href="supplies.html">Supplies</a>
       <a href="gallery.html">Gallery</a>
@@ -26,16 +189,18 @@
         <a href="dashboard/dashboard.html" class="nav-dash">Dashboard</a>
       </div>
     </nav>
+    
     <div class="hdr-actions">
-      
-      
-                  <div class="hdr-theme-wrap" style="display:flex;align-items:center;gap:8px;padding-right:12px;border-right:1px solid var(--border);margin-right:5px;">
+      <!-- Theme Toggle -->
+      <div class="hdr-theme-wrap" style="display:flex;align-items:center;gap:8px;padding-right:12px;border-right:1px solid var(--border);margin-right:5px;">
         <span style="font-size:0.7rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.04em;">Dark</span>
         <label class="tog-sw" title="Toggle Theme">
           <input type="checkbox" data-theme-toggle>
           <span class="tog-sl"></span>
         </label>
       </div>
+      
+      <!-- RTL Toggle -->
       <div class="hdr-rtl-wrap" style="display:flex;align-items:center;gap:8px;padding-right:12px;border-right:1px solid var(--border);margin-right:5px;">
         <span style="font-size:0.7rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.04em;">RTL</span>
         <label class="tog-sw" title="Toggle RTL">
@@ -43,11 +208,14 @@
           <span class="tog-sl"></span>
         </label>
       </div>
-      
+
+      <a href="tools.html" class="hdr-btn"><i class="fa-solid fa-cart-shopping"></i><span class="cart-count">0</span></a>
       <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </div>
 </header>
+
+<!-- Mobile Nav -->
 <nav class="mobile-nav">
   <div class="mobile-nav-top">
     <a href="index.html" class="mobile-logo"><img src="assets/images/logo.png" alt="LuthierTools"></a>
@@ -55,12 +223,12 @@
   </div>
   <div class="mobile-links">
     <a href="index.html">🏠 Home</a>
+    <a href="about.html">ℹ️ About</a>
     <a href="tools.html">🔨 Tools</a>
     <a href="supplies.html">📦 Supplies</a>
     <a href="tutorials.html">🎓 Tutorials</a>
     <a href="community.html">👥 Community</a>
     <a href="contact.html">📞 Contact</a>
-    <a href="dashboard/dashboard.html">⚙️ Dashboard</a>
     <div style="height:1px;background:var(--border);margin:10px 0;"></div>
     <a href="login.html">🔐 Sign In</a>
     <a href="signup.html">👤 Sign Up</a>
@@ -77,62 +245,207 @@
   </div>
 </nav>
 
-<div class="page-hero">
-  <div class="container-xl">
-    <h1 class="page-hero-title">Our Story</h1>
-    <p class="page-hero-desc">15 years putting the right tools in the hands of master builders</p>
-  </div>
-</div>
-<section><div class="container-xl"><div class="row align-items-center g-5">
-  <div class="col-lg-6 slide-left">
-    <span class="sec-tag">Our Founding</span>
-    <h2 class="sec-title">Started in a Workshop,<br>Built for Workshops</h2>
-    <div class="divider"></div>
-    <p style="color:var(--text-muted);line-height:1.9;margin-bottom:18px;">In 2010, master luthier David Arroyo was frustrated. He spent more time sourcing quality tools than actually building. The tools available either weren't designed for instrument work, or cost a fortune for mediocre quality.</p>
-    <p style="color:var(--text-muted);line-height:1.9;margin-bottom:18px;">So he did what craftsmen do — he solved the problem himself. He partnered with specialist tool makers in Japan, Germany, and the UK to develop tools specifically for luthiery, and shared them with the community.</p>
-    <p style="color:var(--text-muted);line-height:1.9;margin-bottom:28px;">LuthierTools was born — not as a business first, but as a mission: get the right tools to the right hands so that more beautiful instruments could exist in the world.</p>
-    <a href="tools.html" class="btn-p">Shop Our Tools →</a>
-  </div>
-  <div class="col-lg-6 slide-right">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-      <div style="background:linear-gradient(135deg,var(--primary),var(--primary-dark));border-radius:16px;padding:30px;color:#fff;grid-row:span 2;display:flex;flex-direction:column;justify-content:flex-end;">
-        <div style="font-size:3.5rem;margin-bottom:14px;opacity:.7;">🎸</div>
-        <div style="font-family:var(--font-head);font-size:1.2rem;font-weight:700;margin-bottom:8px;">"Craft Better.<br>Build Stronger."</div>
-        <div style="opacity:.75;font-size:.85rem;line-height:1.7;">The philosophy that drives every product decision we make.</div>
-      </div>
-      <div style="background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:24px;">
-        <div style="font-family:var(--font-head);font-size:2.2rem;font-weight:900;color:var(--primary);">2010</div>
-        <div style="font-size:.85rem;color:var(--text-muted);">Year Founded</div>
-      </div>
-      <div style="background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:24px;">
-        <div style="font-family:var(--font-head);font-size:2.2rem;font-weight:900;color:var(--secondary);">42</div>
-        <div style="font-size:.85rem;color:var(--text-muted);">Countries Served</div>
+<main>
+  <!-- Hero Section -->
+  <section class="about-hero">
+    <div class="about-hero-bg"></div>
+    <div class="about-hero-overlay"></div>
+    <div class="container-xl">
+      <div class="about-content fade-up">
+        <span class="sec-tag" style="background: rgba(180, 83, 9, 0.2); color: var(--gold-light);">Established 2010</span>
+        <h1 class="hero-title">Crafting the Tools That <span class="accent">Shape Music</span></h1>
+        <p class="hero-desc">We believe that every master instrument begins with a master tool. For 15 years, we've been the silent partner in workshops around the globe.</p>
+        <div class="hero-actions">
+          <a href="#our-story" class="btn-p">Our Journey</a>
+          <a href="tools.html" class="btn-w">Explore the Collection</a>
+        </div>
       </div>
     </div>
-  </div>
-</div></div></section>
-<section class="bg-alt"><div class="container-xl">
-  <div class="sec-head fade-up"><span class="sec-tag">Our Philosophy</span><h2 class="sec-title">Craftsmanship at the Core</h2><div class="divider center"></div></div>
-  <div class="row g-4">
-    <div class="col-md-4 fade-up d1"><div style="background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:34px;text-align:center;height:100%;"><div style="font-size:2.8rem;margin-bottom:18px;">🔬</div><h4 style="font-family:var(--font-head);font-size:1.2rem;color:var(--secondary);margin-bottom:12px;">Precision First</h4><p style="color:var(--text-muted);line-height:1.85;font-size:.9rem;">Every tool tested to tolerances that matter in instrument building. We don't stock anything that hasn't passed our workshop trials.</p></div></div>
-    <div class="col-md-4 fade-up d2"><div style="background:var(--primary);border-radius:16px;padding:34px;text-align:center;color:#fff;height:100%;"><div style="font-size:2.8rem;margin-bottom:18px;">🌱</div><h4 style="font-family:var(--font-head);font-size:1.2rem;margin-bottom:12px;">Builder Community</h4><p style="opacity:.85;line-height:1.85;font-size:.9rem;">We exist to serve builders. Our tutorials, community forum, and expert support are all part of an ecosystem designed to help you succeed.</p></div></div>
-    <div class="col-md-4 fade-up d3"><div style="background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:34px;text-align:center;height:100%;"><div style="font-size:2.8rem;margin-bottom:18px;">♻️</div><h4 style="font-family:var(--font-head);font-size:1.2rem;color:var(--secondary);margin-bottom:12px;">Sustainable Sourcing</h4><p style="color:var(--text-muted);line-height:1.85;font-size:.9rem;">We source tonewoods only from certified sustainable suppliers and work with partners who share our commitment to responsible stewardship.</p></div></div>
-  </div>
-</div></section>
-<section><div class="container-xl">
-  <div class="sec-head fade-up"><span class="sec-tag">Our Team</span><h2 class="sec-title">All Builders, All Believers</h2><div class="divider center"></div></div>
-  <div class="row g-4">
-    <div class="col-md-3 col-sm-6 fade-up d1"><div style="text-align:center;"><div style="width:96px;height:96px;background:linear-gradient(135deg,var(--primary),var(--gold));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2.2rem;margin:0 auto 16px;font-weight:700;color:#fff;font-family:var(--font-head);">DA</div><div style="font-family:var(--font-head);font-weight:700;font-size:1.05rem;color:var(--secondary);">David Arroyo</div><div style="font-size:.8rem;color:var(--primary);margin-bottom:7px;">Founder & Head Luthier</div><p style="font-size:.83rem;color:var(--text-muted);">30 years building classical and flamenco guitars</p></div></div>
-    <div class="col-md-3 col-sm-6 fade-up d2"><div style="text-align:center;"><div style="width:96px;height:96px;background:linear-gradient(135deg,var(--secondary),var(--primary));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2.2rem;color:#fff;font-family:var(--font-head);font-weight:700;margin:0 auto 16px;">SC</div><div style="font-family:var(--font-head);font-weight:700;font-size:1.05rem;color:var(--secondary);">Sarah Chen</div><div style="font-size:.8rem;color:var(--primary);margin-bottom:7px;">Head of Product</div><p style="font-size:.83rem;color:var(--text-muted);">Violin maker and acoustic research specialist</p></div></div>
-    <div class="col-md-3 col-sm-6 fade-up d3"><div style="text-align:center;"><div style="width:96px;height:96px;background:linear-gradient(135deg,var(--gold),var(--primary-light));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2.2rem;color:#fff;font-family:var(--font-head);font-weight:700;margin:0 auto 16px;">MH</div><div style="font-family:var(--font-head);font-weight:700;font-size:1.05rem;color:var(--secondary);">Marcus Herr</div><div style="font-size:.8rem;color:var(--primary);margin-bottom:7px;">Supply Chain Director</div><p style="font-size:.83rem;color:var(--text-muted);">Sources tools from 28 specialist makers globally</p></div></div>
-    <div class="col-md-3 col-sm-6 fade-up d4"><div style="text-align:center;"><div style="width:96px;height:96px;background:linear-gradient(135deg,var(--primary-dark),var(--secondary));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2.2rem;color:#fff;font-family:var(--font-head);font-weight:700;margin:0 auto 16px;">LM</div><div style="font-family:var(--font-head);font-weight:700;font-size:1.05rem;color:var(--secondary);">Lena Müller</div><div style="font-size:.8rem;color:var(--primary);margin-bottom:7px;">Education Director</div><p style="font-size:.83rem;color:var(--text-muted);">Produces tutorials watched by 200k+ builders</p></div></div>
-  </div>
-</div></section>
-<section class="cta-sec"><div class="container-xl" style="position:relative;z-index:2;max-width:640px;margin:0 auto;padding:0 2rem;text-align:center;" class="fade-up">
-  <h2 style="font-family:var(--font-head);font-size:2.8rem;color:#fff;margin-bottom:14px;">Ready to Build Something Great?</h2>
-  <p style="color:rgba(255,255,255,.72);margin-bottom:30px;">Join thousands of builders who trust LuthierTools for every project.</p>
-  <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;"><a href="tools.html" class="btn-g" style="padding:13px 30px;">Shop Tools →</a><a href="signup.html" class="btn-w" style="padding:13px 30px;">Join Trade</a></div>
-</div></section>
+  </section>
+
+  <!-- Story Section -->
+  <section id="our-story" class="py-120">
+    <div class="container-xl">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6 slide-left">
+          <span class="sec-tag">Our Founding</span>
+          <h2 class="sec-title">From One Workbench <br>to Ten Thousand</h2>
+          <div class="divider"></div>
+          <p class="sec-desc mb-4">LuthierTools began in a small, dust-filled workshop in the hills of Andalusia. David Arroyo, a third-generation guitar maker, found himself frustrated by the lack of precision tools designed specifically for the delicate nuances of instrument building.</p>
+          <p class="sec-desc mb-4">What started as a personal quest to forge the perfect finger plane soon grew into a mission to support the entire luthier community. We didn't just want to sell tools; we wanted to preserve a craft.</p>
+          <div class="row g-3 mt-4">
+            <div class="col-sm-6">
+              <div class="d-flex align-items-center gap-3">
+                <div style="font-size: 2rem; color: var(--primary);"><i class="fa-solid fa-award"></i></div>
+                <div>
+                  <h5 class="mb-0 fw-bold">Quality First</h5>
+                  <p class="small text-muted mb-0">Hand-tested at every stage</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="d-flex align-items-center gap-3">
+                <div style="font-size: 2rem; color: var(--primary);"><i class="fa-solid fa-leaf"></i></div>
+                <div>
+                  <h5 class="mb-0 fw-bold">Ethical Sourcing</h5>
+                  <p class="small text-muted mb-0">Sustainable tonewoods</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 slide-right">
+          <div class="row g-4">
+            <div class="col-6">
+              <div class="stat-card-glass bg-alt text-center py-5">
+                <span class="stat-num" data-count="15" data-suffix="+">0+</span>
+                <span class="stat-lbl">Years of Excellence</span>
+              </div>
+            </div>
+            <div class="col-6" style="margin-top: 40px;">
+              <div class="stat-card-glass bg-alt text-center py-5">
+                <span class="stat-num" data-count="250" data-suffix="+">0+</span>
+                <span class="stat-lbl">Custom Tools</span>
+              </div>
+            </div>
+            <div class="col-6" style="margin-top: -20px;">
+              <div class="stat-card-glass bg-alt text-center py-5">
+                <span class="stat-num" data-count="42" data-suffix="">0</span>
+                <span class="stat-lbl">Countries Served</span>
+              </div>
+            </div>
+            <div class="col-6" style="margin-top: 20px;">
+              <div class="stat-card-glass bg-alt text-center py-5">
+                <span class="stat-num" data-count="120" data-suffix="K">0K</span>
+                <span class="stat-lbl">Master Builders</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission Section -->
+  <section class="bg-alt">
+    <div class="container-xl">
+      <div class="mission-box fade-up">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <h2 class="text-white mb-4" style="font-size: 3rem;">Our Mission is Simple.</h2>
+            <p style="font-size: 1.4rem; line-height: 1.6; opacity: 0.9;">To provide the precision, knowledge, and community required to build the world's finest acoustic and electric instruments. When we succeed, the world sounds better.</p>
+          </div>
+          <div class="col-lg-4 text-center mt-4 mt-lg-0">
+            <a href="signup.html" class="btn-w" style="padding: 1.5rem 3rem; font-size: 1.2rem;">Join the Community</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section>
+    <div class="container-xl">
+      <div class="sec-head fade-up">
+        <span class="sec-tag">How We Work</span>
+        <h2 class="sec-title">The LuthierTools Standard</h2>
+        <div class="divider center"></div>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4 fade-up d1">
+          <div class="process-step">
+            <span class="step-num">01</span>
+            <h4 class="fw-bold mb-3">Sourcing</h4>
+            <p class="text-muted">We travel the globe to find specialist steel from Japan and certified sustainable woods from the Americas.</p>
+          </div>
+        </div>
+        <div class="col-md-4 fade-up d2">
+          <div class="process-step">
+            <span class="step-num">02</span>
+            <h4 class="fw-bold mb-3">Testing</h4>
+            <p class="text-muted">Every prototype is sent to five independent master luthiers for real-world testing before it ever hits our shop.</p>
+          </div>
+        </div>
+        <div class="col-md-4 fade-up d3">
+          <div class="process-step">
+            <span class="step-num">03</span>
+            <h4 class="fw-bold mb-3">Precision</h4>
+            <p class="text-muted">Final calibration is done in our own workshop to tolerances of 0.01mm, ensuring your work is flawless.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="bg-alt">
+    <div class="container-xl">
+      <div class="sec-head fade-up">
+        <span class="sec-tag">Meet the Team</span>
+        <h2 class="sec-title">Builders Behind the Scenes</h2>
+        <div class="divider center"></div>
+      </div>
+      <div class="row g-5">
+        <div class="col-lg-4 col-md-6 slide-left d1">
+          <div class="team-card">
+            <div class="team-img-wrap">
+              <img src="assets/images/team-1.png" alt="David Arroyo" class="team-img">
+            </div>
+            <h4 class="fw-bold mb-1">David Arroyo</h4>
+            <p class="text-primary fw-bold small text-uppercase">Founder & Master Luthier</p>
+            <p class="text-muted">"Tools should be an extension of the hand, not an obstacle to the mind."</p>
+            <div class="d-flex justify-content-center gap-3 mt-3">
+              <a href="#" class="text-muted"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#" class="text-muted"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 fade-up d2">
+          <div class="team-card">
+            <div class="team-img-wrap">
+              <img src="assets/images/team-2.png" alt="Sarah Chen" class="team-img">
+            </div>
+            <h4 class="fw-bold mb-1">Sarah Chen</h4>
+            <p class="text-primary fw-bold small text-uppercase">Head of Design</p>
+            <p class="text-muted">Specializing in ergonomic tool design and acoustic physics research.</p>
+            <div class="d-flex justify-content-center gap-3 mt-3">
+              <a href="#" class="text-muted"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#" class="text-muted"><i class="fa-brands fa-behance"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 slide-right d3">
+          <div class="team-card">
+            <div class="team-img-wrap">
+              <div style="width: 100%; height: 100%; background: var(--border); display: flex; align-items: center; justify-content: center; font-size: 3rem; color: var(--text-muted);">
+                <i class="fa-solid fa-user"></i>
+              </div>
+            </div>
+            <h4 class="fw-bold mb-1">Marcus Herr</h4>
+            <p class="text-primary fw-bold small text-uppercase">Supply Chain Director</p>
+            <p class="text-muted">Ensuring that our materials are as ethically sourced as they are high-performing.</p>
+            <div class="d-flex justify-content-center gap-3 mt-3">
+              <a href="#" class="text-muted"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-sec py-120" style="background: linear-gradient(135deg, var(--secondary), var(--primary)); position: relative; overflow: hidden;">
+    <div style="position: absolute; inset: 0; opacity: 0.1; background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.4\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+    <div class="container-xl" style="position: relative; z-index: 2; text-align: center;">
+      <h2 class="text-white mb-4" style="font-size: 3.5rem;">Join the Legacy.</h2>
+      <p class="text-white opacity-75 mb-5" style="font-size: 1.2rem; max-width: 600px; margin: 0 auto;">Whether you're building your first instrument or your thousandth, we're here to provide the precision you deserve.</p>
+      <div class="d-flex gap-3 justify-content-center flex-wrap">
+        <a href="signup.html" class="btn-g" style="padding: 1rem 2.5rem;">Start Your Trade Account</a>
+        <a href="contact.html" class="btn-w" style="padding: 1rem 2.5rem;">Contact Support</a>
+      </div>
+    </div>
+  </section>
+</main>
 
 <footer class="site-footer">
   <div class="container-xl">
@@ -141,18 +454,10 @@
         <a href="index.html" class="footer-logo"><img src="assets/images/logo.png" alt="LuthierTools" class="footer-logo-img"></a>
         <p class="footer-desc">Premium tools and supplies for master instrument builders. Precision crafted for those who demand the best.</p>
         <div class="footer-social" style="display:flex;gap:12px;margin-top:24px;justify-content:flex-start;">
-          <a href="#" class="soc-link" title="Instagram">
-            <svg viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-          </a>
-          <a href="#" class="soc-link" title="YouTube">
-            <svg viewBox="0 0 24 24"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 2-2h15a2 2 0 0 1 2 2 24.12 24.12 0 0 1 0 10 2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2z"/><polyline points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
-          </a>
-          <a href="#" class="soc-link" title="Community">
-            <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </a>
-          <a href="#" class="soc-link" title="Twitter">
-            <svg viewBox="0 0 24 24"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
-          </a>
+          <a href="#" class="soc-link" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="soc-link" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" class="soc-link" title="Community"><i class="fa-solid fa-users"></i></a>
+          <a href="#" class="soc-link" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
         </div>
       </div>
       <div class="col-lg-2 col-md-3 col-6"><h6 class="footer-heading">Shop</h6><ul class="footer-links"><li><a href="tools.html">Hand Tools</a></li><li><a href="tools.html">Measuring</a></li><li><a href="tools.html">Finishing</a></li><li><a href="supplies.html">Supplies</a></li></ul></div>
@@ -163,8 +468,8 @@
     <div class="footer-bottom" style="margin-top:60px;padding-top:30px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;">
       <p style="margin:0;font-size:0.85rem;color:rgba(255,255,255,.38);">© 2026 LuthierTools Co. All rights reserved. Craft Better. Build Stronger.</p>
       <div style="display:flex;gap:20px;align-items:center;">
-        <a href="#" style="font-size:0.85rem;color:rgba(255,255,255,.38);">Privacy</a>
-        <a href="#" style="font-size:0.85rem;color:rgba(255,255,255,.38);">Terms</a>
+        <a href="#" style="font-size:0.85rem;color:rgba(255,255,255,.38);">Privacy Policy</a>
+        <a href="#" style="font-size:0.85rem;color:rgba(255,255,255,.38);">Terms of Service</a>
       </div>
     </div>
   </div>
@@ -172,4 +477,5 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/main.js"></script>
-</body></html>
+</body>
+</html>
