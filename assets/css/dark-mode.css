@@ -133,6 +133,14 @@ body.dark .search-box input {
   color: var(--text);
 }
 
+body.dark .search-ico {
+  stroke: var(--text-muted);
+}
+
+body.dark .search-box:focus-within .search-ico {
+  stroke: var(--primary);
+}
+
 body.dark h1, body.dark h2, body.dark h3, body.dark h4, body.dark h5, body.dark h6,
 body.dark .sw-title, body.dark .auth-title {
   color: var(--text);

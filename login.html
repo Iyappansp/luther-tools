@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>Login — LuthierTools</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
-  <link rel="stylesheet" href="assets/css/style.css"/>
-  <link rel="stylesheet" href="assets/css/dark-mode.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/dark-mode.css" />
   <style>
     body {
       min-height: 100vh;
@@ -19,11 +20,23 @@
     }
 
     /* Custom Scrollbar */
-    ::-webkit-scrollbar { width: 8px; }
-    ::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0.1); }
-    ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 10px; }
-    ::-webkit-scrollbar-thumb:hover { background: var(--primary-light); }
-    
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.1);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--primary);
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--primary-light);
+    }
+
     body::before {
       content: '';
       position: absolute;
@@ -35,7 +48,7 @@
       background: rgba(255, 255, 255, 0.03);
       filter: blur(40px);
     }
-    
+
     body::after {
       content: '';
       position: absolute;
@@ -62,10 +75,17 @@
       z-index: 5;
       animation: cardFadeIn 0.8s cubic-bezier(.4, 0, .2, 1);
     }
-    
+
     @keyframes cardFadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .logo-container {
@@ -242,113 +262,155 @@
     }
 
     /* Light Mode */
-    body.light { background: #f3f4f6; }
-    body.light .auth-card {
-      background: rgba(255, 255, 255, 0.9);
-      border-color: rgba(0, 0, 0, 0.05);
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+    body.light {
+      background: #f8fafc;
     }
+
+    body.light .auth-card {
+      background: #ffffff;
+      border-color: rgba(0, 0, 0, 0.05);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.04);
+    }
+
     body.light .logo-text,
-    body.light .auth-title { color: var(--secondary); }
+    body.light .auth-title {
+      color: var(--secondary);
+    }
+
     body.light .auth-subtitle,
-    body.light .auth-label { color: var(--text-muted); }
-    body.light .auth-input,
-    body.light .social-btn {
-      background: #fff;
-      border-color: var(--border);
+    body.light .auth-label {
+      color: var(--text-muted);
+    }
+
+    body.light .auth-input {
+      background: #fdfdfd;
+      border-color: #e2e8f0;
       color: var(--text);
     }
-    body.light .divider-text { color: var(--text-muted); }
+
+    body.light .divider-text {
+      color: #94a3b8;
+    }
+
     body.light .divider-text::before,
-    body.light .divider-text::after { background: var(--border); }
-    body.light .social-btn { background: #fff; border-color: var(--border); color: var(--text); }
-    body.light .social-btn svg path[fill="#fff"], body.light .social-btn svg path[fill="white"] { fill: #000; }
-    body.light #remember + label { color: var(--text-muted) !important; }
-    body.light .auth-subtitle { color: var(--text-muted); opacity: 0.8; }
+    body.light .divider-text::after {
+      background: #e2e8f0;
+    }
+
+    body.light .social-btn {
+      background: #ffffff;
+      border-color: #e2e8f0;
+      color: var(--secondary);
+    }
+
+    body.light .social-btn:hover {
+      background: #f8fafc;
+      border-color: #cbd5e1;
+    }
+
+    body.light .social-btn svg path[fill="#fff"],
+    body.light .social-btn svg path[fill="white"] {
+      fill: #000;
+    }
+
+    body.light #remember+label {
+      color: var(--text-muted) !important;
+    }
   </style>
-  <link rel="icon" type="image/png" href="assets/images/favicon.png"/>
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
 </head>
+
 <body>
 
 
 
 
-<div class="auth-card">
-  <a href="index.html" class="logo-container" style="text-decoration: none; margin-bottom: 30px;"><img src="assets/images/logo.png" alt="LuthierTools" style="height: 60px; width: auto;"></a>
+  <div class="auth-card">
+    <a href="index.html" class="logo-container" style="text-decoration: none; margin-bottom: 30px;"><img
+        src="assets/images/logo.png" alt="LuthierTools" style="height: 60px; width: auto;"></a>
 
-  <h2 class="auth-title">Welcome Back</h2>
-  <p class="auth-subtitle">Login to your account to continue</p>
+    <h2 class="auth-title">Welcome Back</h2>
+    <p class="auth-subtitle">Login to your account to continue</p>
 
-  <form id="loginForm" onsubmit="event.preventDefault(); doLogin();">
-    <div class="auth-input-group">
-      <label class="auth-label">Email Address</label>
-      <input class="auth-input" type="email" placeholder="you@workshop.com" required autocomplete="email"/>
-    </div>
-
-    <div class="auth-input-group">
-      <label class="auth-label">Password</label>
-      <div style="position:relative;">
-        <input class="auth-input" type="password" id="pwd" placeholder="••••••••" required autocomplete="current-password"/>
-        <button type="button" onclick="togglePwd()" style="position:absolute; right:12px; top:50%; transform:translateY(-50%); background:none; border:none; color:var(--text-muted); cursor:pointer;">👁</button>
+    <form id="loginForm" onsubmit="event.preventDefault(); doLogin();">
+      <div class="auth-input-group">
+        <label class="auth-label">Email Address</label>
+        <input class="auth-input" type="email" placeholder="you@workshop.com" required autocomplete="email" />
       </div>
-      <div style="text-align: right; margin-top: 8px;">
-        <a href="#" style="font-size:0.75rem; color:var(--primary-light); font-weight:600;">Forgot Password?</a>
+
+      <div class="auth-input-group">
+        <label class="auth-label">Password</label>
+        <div style="position:relative;">
+          <input class="auth-input" type="password" id="pwd" placeholder="••••••••" required
+            autocomplete="current-password" />
+          <button type="button" onclick="togglePwd()"
+            style="position:absolute; right:12px; top:50%; transform:translateY(-50%); background:none; border:none; color:var(--text-muted); cursor:pointer;">👁</button>
+        </div>
+        <div style="text-align: right; margin-top: 8px;">
+          <a href="#" style="font-size:0.75rem; color:var(--primary-light); font-weight:600;">Forgot Password?</a>
+        </div>
       </div>
+
+
+      <div style="display:flex; align-items:center; gap:8px; margin-bottom:28px;">
+        <input type="checkbox" id="remember" style="accent-color:var(--primary);" />
+        <label for="remember" style="font-size:0.85rem; color:var(--text-muted); cursor:pointer;">Remember me</label>
+      </div>
+
+      <button type="submit" class="submit-btn" id="loginBtn">
+        Sign In →
+      </button>
+    </form>
+
+    <div class="divider-text">Or continue with</div>
+
+    <div class="social-grid">
+      <button class="social-btn" title="Sign in with Google">
+        <svg viewBox="0 0 24 24">
+          <path fill="#4285F4"
+            d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+          <path fill="#34A853"
+            d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+          <path fill="#FBBC05"
+            d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" />
+          <path fill="#EA4335"
+            d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+        </svg>
+      </button>
+      <button class="social-btn" title="Sign in with Apple">
+        <svg viewBox="0 0 24 24">
+          <path fill="#fff"
+            d="M17.05 20.28c-.96.95-2.04 1.72-3.3 1.72-1.22 0-1.61-.75-3.1-.75-1.47 0-1.92.73-3.08.75-1.28.02-2.52-.89-3.51-2.04C2.04 17.65 1 14.96 1 12.19c0-4.32 2.72-6.58 5.39-6.58 1.41 0 2.6.93 3.47.93.84 0 2.22-.96 3.75-.96 1.11 0 2.5.51 3.4 1.5-3.04 1.78-2.54 6.27.44 7.64-.81 2.05-1.89 4.04-3.4 5.56zM13.29 4.24c-.21-2.45 1.96-4.49 4.09-4.24.26 2.5-2.13 4.67-4.09 4.24z" />
+        </svg>
+      </button>
+      <button class="social-btn" title="Sign in with Facebook">
+        <svg viewBox="0 0 24 24">
+          <path fill="#1877F2"
+            d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+        </svg>
+      </button>
     </div>
 
-
-    <div style="display:flex; align-items:center; gap:8px; margin-bottom:28px;">
-      <input type="checkbox" id="remember" style="accent-color:var(--primary);"/>
-      <label for="remember" style="font-size:0.85rem; color:var(--text-muted); cursor:pointer;">Remember me</label>
-    </div>
-
-    <button type="submit" class="submit-btn" id="loginBtn">
-      Sign In →
-    </button>
-  </form>
-
-  <div class="divider-text">Or continue with</div>
-
-  <div class="social-grid">
-    <button class="social-btn" title="Sign in with Google">
-      <svg viewBox="0 0 24 24">
-        <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-        <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-        <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/>
-        <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
-      </svg>
-    </button>
-    <button class="social-btn" title="Sign in with Apple">
-      <svg viewBox="0 0 24 24">
-        <path fill="#fff" d="M17.05 20.28c-.96.95-2.04 1.72-3.3 1.72-1.22 0-1.61-.75-3.1-.75-1.47 0-1.92.73-3.08.75-1.28.02-2.52-.89-3.51-2.04C2.04 17.65 1 14.96 1 12.19c0-4.32 2.72-6.58 5.39-6.58 1.41 0 2.6.93 3.47.93.84 0 2.22-.96 3.75-.96 1.11 0 2.5.51 3.4 1.5-3.04 1.78-2.54 6.27.44 7.64-.81 2.05-1.89 4.04-3.4 5.56zM13.29 4.24c-.21-2.45 1.96-4.49 4.09-4.24.26 2.5-2.13 4.67-4.09 4.24z"/>
-      </svg>
-    </button>
-    <button class="social-btn" title="Sign in with Facebook">
-      <svg viewBox="0 0 24 24">
-        <path fill="#1877F2" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-      </svg>
-    </button>
+    <p class="auth-footer" style="margin-top: 24px;">
+      New here? <a href="signup.html">Create account</a>
+    </p>
   </div>
 
-  <p class="auth-footer" style="margin-top: 24px;">
-    New here? <a href="signup.html">Create account</a>
-  </p>
-</div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    function togglePwd() {
+      const f = document.getElementById('pwd');
+      f.type = f.type === 'password' ? 'text' : 'password';
+    }
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/main.js"></script>
-<script>
-function togglePwd() {
-  const f = document.getElementById('pwd');
-  f.type = f.type === 'password' ? 'text' : 'password';
-}
-
-function doLogin() {
-  const btn = document.getElementById('loginBtn');
-  btn.innerHTML = '<span class="spinner-border spinner-border-sm"></span> Signing in...';
-  btn.disabled = true;
-  setTimeout(() => window.location.href = 'dashboard/dashboard.html', 1500);
-}
-</script>
+    function doLogin() {
+      const btn = document.getElementById('loginBtn');
+      btn.innerHTML = '<span class="spinner-border spinner-border-sm"></span> Signing in...';
+      btn.disabled = true;
+      setTimeout(() => window.location.href = 'dashboard/dashboard.html', 1500);
+    }
+  </script>
 </body>
+
 </html>
