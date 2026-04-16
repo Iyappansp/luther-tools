@@ -1960,7 +1960,6 @@ section {
   background: rgba(255,255,255,0.1);
 }
 
-/* ── BRANDS ─────────────────────────────────────── */
 .brand-grid {
   display: flex;
   align-items: center;
@@ -1971,10 +1970,57 @@ section {
   filter: grayscale(1);
   transition: var(--transition);
 }
-
 .brand-grid:hover {
   opacity: 1;
   filter: grayscale(0);
+}
+
+/* ── ADDITIONAL RESPONSIVE UTILITIES ───────────── */
+.gallery-filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+@media(max-width:768px) {
+  .gallery-filters {
+    gap: 6px;
+  }
+  .filter-btn {
+    padding: 6px 14px;
+    font-size: 0.8rem;
+  }
+  .sec-title {
+    font-size: 2.2rem;
+  }
+}
+
+.workshop-visit-card {
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 32px;
+  padding: 70px 40px;
+  text-align: center;
+  box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.6);
+}
+
+@media(max-width:768px) {
+  .workshop-visit-card {
+    padding: 40px 24px;
+    border-radius: 20px;
+  }
+  .workshop-visit-card h2 {
+    font-size: 2rem !important;
+  }
+  .workshop-visit-card p {
+    font-size: 1rem !important;
+  }
 }
 
 .brand-item img {
