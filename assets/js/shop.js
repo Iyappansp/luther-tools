@@ -61,7 +61,6 @@ const Shop = {
             <img src="${p.img}" alt="${p.name}" style="width:100%; height:100%; object-fit:cover;">
             ${p.badge ? `<span class="product-badge">${p.badge}</span>` : ''}
             <div class="product-overlay">
-              <button class="ov-btn" data-add-cart data-id="${p.id}" data-name="${p.name}" data-price="${p.price}" title="Add to cart">🛒</button>
               <a href="tool-detail.html?id=${p.id}" class="ov-btn" title="View details">👁️</a>
               <button class="ov-btn" title="Wishlist" onclick="Toast.show('❤️ Added to wishlist')">❤️</button>
             </div>
@@ -145,8 +144,6 @@ const Detail = {
     document.title = `${p.name} — LuthierTools`;
     const stEl = document.getElementById('detail-stock');
     if(stEl){ stEl.textContent = STOCK_LABEL[p.stock]; stEl.className = `stock ${STOCK_CLASS[p.stock]}`; }
-    const addBtn = document.getElementById('detail-add-cart');
-    if(addBtn){ addBtn.dataset.id=p.id; addBtn.dataset.name=p.name; addBtn.dataset.price=p.price; }
     const bcEl = document.getElementById('detail-breadcrumb');
     if(bcEl) bcEl.textContent = p.name;
   }

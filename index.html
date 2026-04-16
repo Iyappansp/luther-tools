@@ -32,7 +32,7 @@
       </div>
     </nav>
     <div class="hdr-actions">
-      <button class="hdr-btn" title="Cart">🛒<span class="cart-count">0</span></button>
+      
       
                   <div class="hdr-theme-wrap" style="display:flex;align-items:center;gap:8px;padding-right:12px;border-right:1px solid var(--border);margin-right:5px;">
         <span style="font-size:0.7rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.04em;">Dark</span>
@@ -54,13 +54,29 @@
   </div>
 </header>
 <nav class="mobile-nav">
-  <a href="index.html">🏠 Home</a>
-  <a href="tools.html">🔨 Tools</a>
-  <a href="supplies.html">📦 Supplies</a>
-  <a href="tutorials.html">🎓 Tutorials</a>
-  <a href="community.html">👥 Community</a>
-  <a href="contact.html">📞 Contact</a>
-  <a href="dashboard/dashboard.html">⚙️ Dashboard</a>
+  <div class="mobile-nav-top">
+    <a href="index.html" class="mobile-logo"><img src="assets/images/logo.png" alt="LuthierTools"></a>
+    <button class="mobile-close">✕</button>
+  </div>
+  <div class="mobile-links">
+    <a href="index.html">🏠 Home</a>
+    <a href="tools.html">🔨 Tools</a>
+    <a href="supplies.html">📦 Supplies</a>
+    <a href="tutorials.html">🎓 Tutorials</a>
+    <a href="community.html">👥 Community</a>
+    <a href="contact.html">📞 Contact</a>
+    <a href="dashboard/dashboard.html">⚙️ Dashboard</a>
+  </div>
+  <div class="mobile-nav-bottom">
+    <div class="mobile-opt-item">
+      <span>Dark Theme</span>
+      <label class="tog-sw"><input type="checkbox" data-theme-toggle><span class="tog-sl"></span></label>
+    </div>
+    <div class="mobile-opt-item">
+      <span>RTL Layout</span>
+      <label class="tog-sw"><input type="checkbox" data-rtl-toggle><span class="tog-sl"></span></label>
+    </div>
+  </div>
 </nav>
 
 <!-- HERO -->
@@ -136,17 +152,17 @@
     <div class="row g-4">
       <div class="col-lg-4 col-md-6 fade-up d1">
         <div class="product-card"><div class="product-img"><img src="assets/images/prod_fret_saw.png" alt="Precision Fret Saw" style="width:100%;height:100%;object-fit:cover;"><span class="product-badge">Bestseller</span>
-          <div class="product-overlay"><button class="ov-btn" data-add-cart data-id="p1" data-name="Precision Fret Saw" data-price="49.99">🛒</button><a href="tool-detail.html?id=p1" class="ov-btn">👁️</a><button class="ov-btn" onclick="Toast.show('❤️ Wishlisted')">❤️</button></div>
+          <div class="product-overlay"><a href="tool-detail.html?id=p1" class="ov-btn">👁️</a><button class="ov-btn" onclick="Toast.show('❤️ Wishlisted')">❤️</button></div>
         </div><div class="product-body"><div class="product-cat">Hand Tools</div><div class="product-name">Precision Fret Saw</div><div class="product-rating"><span class="stars">★★★★★</span><span class="rating-ct">4.9 (128)</span></div><div class="product-foot"><div class="product-price"><span class="old-price">$64.99</span>$49.99</div><span class="stock in">● In Stock</span></div></div></div>
       </div>
       <div class="col-lg-4 col-md-6 fade-up d2">
         <div class="product-card"><div class="product-img"><img src="assets/images/prod_caliper.png" alt="Digital Caliper Pro" style="width:100%;height:100%;object-fit:cover;"><span class="product-badge" style="background:#3B82F6;">New</span>
-          <div class="product-overlay"><button class="ov-btn" data-add-cart data-id="p3" data-name="Digital Caliper Pro" data-price="89.00">🛒</button><a href="tool-detail.html?id=p3" class="ov-btn">👁️</a><button class="ov-btn" onclick="Toast.show('❤️ Wishlisted')">❤️</button></div>
+          <div class="product-overlay"><a href="tool-detail.html?id=p3" class="ov-btn">👁️</a><button class="ov-btn" onclick="Toast.show('❤️ Wishlisted')">❤️</button></div>
         </div><div class="product-body"><div class="product-cat">Measuring</div><div class="product-name">Digital Caliper Pro</div><div class="product-rating"><span class="stars">★★★★★</span><span class="rating-ct">4.8 (203)</span></div><div class="product-foot"><div class="product-price"><span class="old-price">$110.00</span>$89.00</div><span class="stock in">● In Stock</span></div></div></div>
       </div>
       <div class="col-lg-4 col-md-6 fade-up d3">
         <div class="product-card"><div class="product-img"><img src="assets/images/prod_chisel_set.png" alt="Chisel Set" style="width:100%;height:100%;object-fit:cover;"><span class="product-badge" style="background:var(--gold);">Premium</span>
-          <div class="product-overlay"><button class="ov-btn" data-add-cart data-id="p10" data-name="Luthier's Chisel Set" data-price="145.00">🛒</button><a href="tool-detail.html?id=p10" class="ov-btn">👁️</a><button class="ov-btn" onclick="Toast.show('❤️ Wishlisted')">❤️</button></div>
+          <div class="product-overlay"><a href="tool-detail.html?id=p10" class="ov-btn">👁️</a><button class="ov-btn" onclick="Toast.show('❤️ Wishlisted')">❤️</button></div>
         </div><div class="product-body"><div class="product-cat">Hand Tools</div><div class="product-name">Luthier's Chisel Set</div><div class="product-rating"><span class="stars">★★★★★</span><span class="rating-ct">5.0 (45)</span></div><div class="product-foot"><div class="product-price"><span class="old-price">$179.00</span>$145.00</div><span class="stock in">● In Stock</span></div></div></div>
       </div>
     </div>

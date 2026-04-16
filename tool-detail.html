@@ -25,7 +25,7 @@
       </div>
     </nav>
     <div class="hdr-actions">
-      <button class="hdr-btn" title="Cart">🛒<span class="cart-count">0</span></button>
+      
       
                   <div class="hdr-theme-wrap" style="display:flex;align-items:center;gap:8px;padding-right:12px;border-right:1px solid var(--border);margin-right:5px;">
         <span style="font-size:0.7rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.04em;">Dark</span>
@@ -47,13 +47,29 @@
   </div>
 </header>
 <nav class="mobile-nav">
-  <a href="index.html">🏠 Home</a>
-  <a href="tools.html">🔨 Tools</a>
-  <a href="supplies.html">📦 Supplies</a>
-  <a href="tutorials.html">🎓 Tutorials</a>
-  <a href="community.html">👥 Community</a>
-  <a href="contact.html">📞 Contact</a>
-  <a href="dashboard/dashboard.html">⚙️ Dashboard</a>
+  <div class="mobile-nav-top">
+    <a href="index.html" class="mobile-logo"><img src="assets/images/logo.png" alt="LuthierTools"></a>
+    <button class="mobile-close">✕</button>
+  </div>
+  <div class="mobile-links">
+    <a href="index.html">🏠 Home</a>
+    <a href="tools.html">🔨 Tools</a>
+    <a href="supplies.html">📦 Supplies</a>
+    <a href="tutorials.html">🎓 Tutorials</a>
+    <a href="community.html">👥 Community</a>
+    <a href="contact.html">📞 Contact</a>
+    <a href="dashboard/dashboard.html">⚙️ Dashboard</a>
+  </div>
+  <div class="mobile-nav-bottom">
+    <div class="mobile-opt-item">
+      <span>Dark Theme</span>
+      <label class="tog-sw"><input type="checkbox" data-theme-toggle><span class="tog-sl"></span></label>
+    </div>
+    <div class="mobile-opt-item">
+      <span>RTL Layout</span>
+      <label class="tog-sw"><input type="checkbox" data-rtl-toggle><span class="tog-sl"></span></label>
+    </div>
+  </div>
 </nav>
 <div class="breadcrumb-bar"><div class="container-xl"><div class="breadcrumb-inner"><a href="index.html">Home</a><span class="sep">›</span><a href="tools.html">Tools</a><span class="sep">›</span><span id="detail-breadcrumb" class="current">Tool Detail</span></div></div></div>
 <section style="padding:50px 0;"><div class="container-xl"><div class="row g-5">
@@ -94,7 +110,7 @@
         <input id="qty" type="number" value="1" min="1" style="width:48px;height:44px;border:none;text-align:center;font-weight:700;font-size:1rem;background:var(--surface);color:var(--text);outline:none;"/>
         <button onclick="const i=document.getElementById('qty');i.value=+i.value+1" style="width:40px;height:44px;background:var(--gray-100);border:none;cursor:pointer;font-size:1.1rem;color:var(--text);">+</button>
       </div>
-      <button id="detail-add-cart" class="btn-p" style="flex:1;justify-content:center;min-width:150px;" data-add-cart data-id="p1" data-name="Precision Fret Saw" data-price="49.99">🛒 Add to Cart</button>
+      
       <button class="hdr-btn" onclick="Toast.show('❤️ Added to wishlist')" title="Wishlist">❤️</button>
     </div>
     <div style="display:flex;gap:18px;font-size:.8rem;color:var(--text-muted);flex-wrap:wrap;">

@@ -29,7 +29,7 @@
       </div>
     </nav>
     <div class="hdr-actions">
-      <button class="hdr-btn" title="Cart">🛒<span class="cart-count">0</span></button>
+      
       
                   <div class="hdr-theme-wrap" style="display:flex;align-items:center;gap:8px;padding-right:12px;border-right:1px solid var(--border);margin-right:5px;">
         <span style="font-size:0.7rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.04em;">Dark</span>
@@ -51,13 +51,29 @@
   </div>
 </header>
 <nav class="mobile-nav">
-  <a href="index.html">🏠 Home</a>
-  <a href="tools.html">🔨 Tools</a>
-  <a href="supplies.html">📦 Supplies</a>
-  <a href="tutorials.html">🎓 Tutorials</a>
-  <a href="community.html">👥 Community</a>
-  <a href="contact.html">📞 Contact</a>
-  <a href="dashboard/dashboard.html">⚙️ Dashboard</a>
+  <div class="mobile-nav-top">
+    <a href="index.html" class="mobile-logo"><img src="assets/images/logo.png" alt="LuthierTools"></a>
+    <button class="mobile-close">✕</button>
+  </div>
+  <div class="mobile-links">
+    <a href="index.html">🏠 Home</a>
+    <a href="tools.html">🔨 Tools</a>
+    <a href="supplies.html">📦 Supplies</a>
+    <a href="tutorials.html">🎓 Tutorials</a>
+    <a href="community.html">👥 Community</a>
+    <a href="contact.html">📞 Contact</a>
+    <a href="dashboard/dashboard.html">⚙️ Dashboard</a>
+  </div>
+  <div class="mobile-nav-bottom">
+    <div class="mobile-opt-item">
+      <span>Dark Theme</span>
+      <label class="tog-sw"><input type="checkbox" data-theme-toggle><span class="tog-sl"></span></label>
+    </div>
+    <div class="mobile-opt-item">
+      <span>RTL Layout</span>
+      <label class="tog-sw"><input type="checkbox" data-rtl-toggle><span class="tog-sl"></span></label>
+    </div>
+  </div>
 </nav>
 
 <div class="page-hero" style="background-image: linear-gradient(rgba(31, 41, 55, 0.8), rgba(31, 41, 55, 0.8)), url('assets/images/hero_hand_tools.png'); background-size: cover; background-position: center;">

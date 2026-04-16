@@ -99,18 +99,31 @@ const HeaderScroll = {
 const MobileNav = {
   init(){
     const btn = document.querySelector('.hamburger');
+    const closeBtn = document.querySelector('.mobile-close');
     const nav = document.querySelector('.mobile-nav');
-    if(!btn || !nav) return;
-    btn.addEventListener('click', () => {
-      const open = nav.classList.toggle('open');
-      const [a,b,c] = btn.querySelectorAll('span');
-      if(open){ a.style.transform='rotate(45deg) translate(5px,5px)'; b.style.opacity='0'; c.style.transform='rotate(-45deg) translate(5px,-5px)'; }
-      else { [a,b,c].forEach(s => { s.style.transform=''; s.style.opacity=''; }); }
-    });
+    if(!nav) return;
+    
+    const toggle = (force) => {
+      const open = force !== undefined ? force : nav.classList.toggle('open');
+      if(btn) {
+        const spans = btn.querySelectorAll('span');
+        if(open){ 
+          if(spans.length >= 3) {
+            spans[0].style.transform='rotate(45deg) translate(5px,5px)'; 
+            spans[1].style.opacity='0'; 
+            spans[2].style.transform='rotate(-45deg) translate(5px,-5px)'; 
+          }
+        }
+        else { spans.forEach(s => { s.style.transform=''; s.style.opacity=''; }); }
+      }
+    };
+
+    btn && btn.addEventListener('click', () => toggle());
+    closeBtn && closeBtn.addEventListener('click', () => toggle(false));
+    
     document.addEventListener('click', e => {
-      if(!btn.contains(e.target) && !nav.contains(e.target)){
-        nav.classList.remove('open');
-        btn.querySelectorAll('span').forEach(s => { s.style.transform=''; s.style.opacity=''; });
+      if(nav.classList.contains('open') && !nav.contains(e.target) && (btn && !btn.contains(e.target))){
+        toggle(false);
       }
     });
   }
@@ -144,7 +157,7 @@ const Cart = {
     ex ? ex.qty++ : this.items.push({...item, qty:1});
     localStorage.setItem('lt-cart', JSON.stringify(this.items));
     this.updateBadge();
-    Toast.show(`🛒 ${item.name} added to cart`);
+    Toast.show(`${item.name} added to cart`);
   },
   get count(){ return this.items.reduce((s,i) => s+(i.qty||1),0); },
   updateBadge(){
