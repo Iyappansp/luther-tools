@@ -425,7 +425,7 @@
     <h1 class="auth-title">Create Trade Account</h1>
     <p class="auth-subtitle">Join our community of master builders</p>
 
-    <div class="steps-nav">
+    <div class="steps-nav" style="max-width: 300px; margin: 0 auto 30px;">
       <div class="step-item active" id="si1">
         <div class="step-dot active" id="s1">1</div>
         <span class="step-label">Account</span>
@@ -433,10 +433,6 @@
       <div class="step-item" id="si2">
         <div class="step-dot" id="s2">2</div>
         <span class="step-label">Business</span>
-      </div>
-      <div class="step-item" id="si3">
-        <div class="step-dot" id="s3">3</div>
-        <span class="step-label">Plan</span>
       </div>
     </div>
 
@@ -474,40 +470,13 @@
         <option>Hobbyist</option>
       </select>
 
-      <div style="display:flex; gap:10px; margin-top:10px;">
-        <button class="submit-btn" style="background:var(--secondary);" onclick="gotoStep(1)">← Back</button>
-        <button class="submit-btn" onclick="gotoStep(3)">Continue →</button>
-      </div>
-    </div>
-
-    <!-- STEP 3 -->
-    <div id="step3" style="display:none;">
-      <div class="tier-opt sel" onclick="pickTier(this)">
-        <div style="display:flex; justify-content:space-between; align-items:center;">
-          <div>
-            <div class="tier-name">Maker — Free</div>
-            <div class="tier-desc">For hobbyists</div>
-          </div>
-          <span style="font-size: 1.2rem;">🔨</span>
-        </div>
-      </div>
-      <div class="tier-opt" onclick="pickTier(this)">
-        <div style="display:flex; justify-content:space-between; align-items:center;">
-          <div>
-            <div class="tier-name">Trade Pro — $29/mo</div>
-            <div class="tier-desc">Wholesale + Tutorials</div>
-          </div>
-          <span style="font-size: 1.2rem;">⭐</span>
-        </div>
-      </div>
-
       <div style="display:flex; align-items:center; gap:8px; margin:20px 0;">
         <input type="checkbox" id="tos" style="accent-color:var(--primary);" />
         <label for="tos" style="font-size:0.8rem; color:var(--text-muted);">I agree to the Terms & Privacy</label>
       </div>
 
       <div style="display:flex; gap:10px;">
-        <button class="submit-btn" style="background:var(--secondary);" onclick="gotoStep(2)">← Back</button>
+        <button class="submit-btn" style="background:var(--secondary);" onclick="gotoStep(1)">← Back</button>
         <button class="submit-btn" onclick="doSignup(this)">Complete 🎸</button>
       </div>
     </div>
@@ -550,7 +519,7 @@
   <script src="assets/js/main.js"></script>
   <script>
     function gotoStep(n) {
-      [1, 2, 3].forEach(i => {
+      [1, 2].forEach(i => {
         document.getElementById('step' + i).style.display = i === n ? 'block' : 'none';
         const dot = document.getElementById('s' + i);
         const item = document.getElementById('si' + i);

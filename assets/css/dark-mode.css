@@ -1,25 +1,23 @@
 /* ===== DARK MODE ===== */
 body.dark {
-  --bg: #030712; /* Deep Midnight */
-  --surface: #111827; /* Deep Navy */
-  --surface-hover: #1f2937;
-  --primary: #D97706; /* Rich Gold */
-  --primary-dark: #B45309;
-  --primary-light: #FCD34D;
-  --text: #F3F4F6; /* Soft Grey/White */
-  --text-muted: #9CA3AF;
-  --border: rgba(255, 255, 255, 0.08);
-  --border-focus: rgba(217, 119, 6, 0.4);
-  --gray-100: #030712;
-  --gray-200: #111827;
-  --gray-300: #1f2937;
-  --secondary: #0F172A; /* CORRECTED: Removed the white color */
-  --accent: #D97706;
+  --bg: #000000; /* True Black */
+  --bg-alt: #121212; /* Dark Grey for alternate sections */
+  --surface: #0A0A0A; /* Slightly lighter than black */
+  --surface-hover: #1A1A1A;
+  --text: #F9FAFB;
+  --text-muted: #A1A1AA; /* Better contrast on black */
+  --border: rgba(255, 255, 255, 0.1);
+  --border-focus: rgba(146, 64, 14, 0.4); /* Based on brand primary */
+  --gray-100: #000000;
+  --gray-200: #121212;
+  --gray-300: #1A1A1A;
+  --secondary: #000000;
+  --accent: #D97706; /* Keep gold as accent */
   --accent-light: #FDE68A;
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.4);
-  --shadow: 0 4px 20px rgba(0,0,0,0.5);
-  --shadow-lg: 0 12px 48px rgba(0,0,0,0.6);
-  --shadow-xl: 0 24px 80px rgba(0,0,0,0.7);
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.8);
+  --shadow: 0 4px 20px rgba(0,0,0,0.9);
+  --shadow-lg: 0 12px 48px rgba(0,0,0,1);
+  --shadow-xl: 0 24px 80px rgba(0,0,0,1);
   background-color: var(--bg);
 }
 
@@ -55,7 +53,7 @@ body.dark .divider-text::after {
 }
 
 body.dark .site-header {
-  background: rgba(15, 23, 42, 0.85);
+  background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
 }
@@ -163,7 +161,7 @@ body.dark .nav-links a {
 
 body.dark .nav-links a:hover,
 body.dark .nav-links a.active {
-  color: var(--gold-light);
+  color: var(--primary);
 }
 
 body.dark .sec-title,
@@ -174,7 +172,7 @@ body.dark .av-name {
 }
 
 body.dark .breadcrumb-bar {
-  background: rgba(21, 25, 33, 0.5);
+  background: rgba(10, 10, 10, 0.5);
   border-bottom: 1px solid var(--border);
 }
 
@@ -224,7 +222,7 @@ body.dark .dash-sidebar {
 }
 
 body.dark .dash-topbar {
-  background: rgba(21, 25, 33, 0.8);
+  background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
 }
@@ -321,7 +319,7 @@ body.dark .gallery-item {
 }
 
 body.dark .site-footer {
-  background: #020617;
+  background: #000000;
   border-top: 1px solid var(--border);
   color: var(--text-muted);
 }
@@ -337,7 +335,7 @@ body.dark .footer-desc {
 }
 
 body.dark .footer-links a:hover {
-  color: var(--gold-light);
+  color: var(--primary);
 }
 
 body.dark .soc-link {
@@ -363,7 +361,7 @@ body.dark .footer-bottom a {
 }
 
 body.dark .bg-alt {
-  background-color: #0d1017;
+  background-color: var(--bg-alt);
 }
 
 body.dark .sec-tag {
@@ -441,6 +439,28 @@ body.dark .tutorial-card:hover .play-icon {
 
 body.dark .testi-quote {
   opacity: 0.3;
+}
+
+body.dark .mission-box {
+  background: var(--primary-dark);
+  color: #fff;
+}
+
+body.dark .mission-box p {
+  color: rgba(255, 255, 255, 0.95) !important;
+}
+
+body.dark .process-step h4 {
+  color: #fff !important;
+}
+
+body.dark .process-step p {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+body.dark .process-step .step-num {
+  color: var(--primary-light) !important;
+  opacity: 0.15;
 }
 
 body.dark ::selection {

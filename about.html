@@ -47,7 +47,7 @@
     .about-hero-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(to right, rgba(31, 41, 55, 0.9) 0%, rgba(31, 41, 55, 0.4) 100%);
+      background: linear-gradient(to right, rgba(31, 41, 55, 0.95) 0%, rgba(31, 41, 55, 0.6) 100%);
     }
 
     body.rtl .about-hero-overlay {
@@ -71,10 +71,15 @@
     .stat-card-glass {
       background: rgba(255, 255, 255, 0.05);
       backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(0, 0, 0, 0.05);
       border-radius: var(--radius-lg);
       padding: 2rem;
       transition: var(--transition);
+    }
+
+    body.dark .stat-card-glass {
+      background: rgba(255, 255, 255, 0.03);
+      border-color: rgba(255, 255, 255, 0.1);
     }
 
     .stat-card-glass:hover {
@@ -135,6 +140,15 @@
       box-shadow: var(--shadow-lg);
     }
 
+    body.dark .team-card .text-muted {
+      color: var(--text) !important;
+      opacity: 0.85;
+    }
+
+    body.dark .team-card h4 {
+      color: #fff !important;
+    }
+
     .team-img {
       width: 100%;
       height: 100%;
@@ -164,86 +178,99 @@
       right: auto;
       left: 40px;
     }
+
+    /* Stats Contrast Fix */
+    .stat-card-glass .stat-num {
+      color: var(--primary) !important;
+      font-size: 3rem;
+    }
+    
+    .stat-card-glass .stat-lbl {
+      color: var(--text) !important;
+      font-weight: 700;
+      opacity: 1;
+      letter-spacing: 0.1em;
+    }
+
+    body.dark .stat-card-glass .stat-num {
+      color: var(--gold-light) !important;
+    }
+
+    body.dark .stat-card-glass .stat-lbl {
+      color: var(--text-muted) !important;
+    }
   </style>
 </head>
 <body class="light">
 
-<header class="site-header">
-  <div class="hdr-inner">
-    <a href="index.html" class="logo-wrap">
-      <img src="assets/images/logo.png" alt="LuthierTools" class="main-logo">
-    </a>
-    
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="home-2.html">Home v2</a>
-      <a href="about.html">About</a>
-      <a href="tools.html">Tools</a>
-      <a href="supplies.html">Supplies</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="tutorials.html">Tutorials</a>
-      <a href="community.html">Community</a>
-      <a href="contact.html">Contact</a>
-      <div class="hdr-auth-btns" style="display:flex;gap:8px;margin-left:12px;">
-        <a href="login.html" class="nav-login">Login</a>
-        <a href="dashboard/dashboard.html" class="nav-dash">Dashboard</a>
+    <!-- HEADER -->
+  <header class="site-header">
+    <div class="hdr-inner">
+      <a href="index.html" class="logo-wrap"><img src="assets/images/logo.png" alt="LuthierTools" class="main-logo"></a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="home-2.html">Home 2</a>
+        <a href="about.html">About</a>
+        <a href="tools.html">Tools</a>
+        <a href="supplies.html">Supplies</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="tutorials.html">Tutorials</a>
+        <a href="community.html">Community</a>
+        <a href="contact.html">Contact</a>
+        <a href="dashboard/dashboard.html">Dashboard</a>
+        <div class="hdr-auth-btns">
+          <a href="login.html" class="nav-dash">Login</a>
+        </div>
+      </nav>
+            <div class="hdr-actions">
+        <div class="hdr-toggle-item hdr-theme-wrap">
+          <span class="hdr-toggle-label">Dark</span>
+          <label class="tog-sw" title="Toggle Theme">
+            <input type="checkbox" data-theme-toggle>
+            <span class="tog-sl"></span>
+          </label>
+        </div>
+        <div class="hdr-toggle-item hdr-rtl-wrap">
+          <span class="hdr-toggle-label">RTL</span>
+          <label class="tog-sw" title="Toggle RTL">
+            <input type="checkbox" data-rtl-toggle>
+            <span class="tog-sl"></span>
+          </label>
+        </div>
+        <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
       </div>
-    </nav>
-    
-    <div class="hdr-actions">
-      <!-- Theme Toggle -->
-      <div class="hdr-theme-wrap" style="display:flex;align-items:center;gap:8px;padding-right:12px;border-right:1px solid var(--border);margin-right:5px;">
-        <span style="font-size:0.7rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.04em;">Dark</span>
-        <label class="tog-sw" title="Toggle Theme">
-          <input type="checkbox" data-theme-toggle>
-          <span class="tog-sl"></span>
-        </label>
+    </div>
+  </header>
+  <nav class="mobile-nav">
+    <div class="mobile-nav-top">
+      <a href="index.html" class="mobile-logo"><img src="assets/images/logo.png" alt="LuthierTools"></a>
+      <button class="mobile-close">✕</button>
+    </div>
+    <div class="mobile-links">
+      <a href="index.html">🏠 Home</a>
+      <a href="home-2.html">🏠 Home 2</a>
+      <a href="about.html">ℹ️ About</a>
+      <a href="tools.html">🔨 Tools</a>
+      <a href="supplies.html">📦 Supplies</a>
+      <a href="tutorials.html">🎓 Tutorials</a>
+      <a href="community.html">👥 Community</a>
+      <a href="contact.html">📞 Contact</a>
+      <a href="dashboard/dashboard.html">⚙️ Dashboard</a>
+      <div style="height:1px;background:var(--border);margin:10px 0;"></div>
+      <a href="login.html">🔐 Sign In</a>
+      <a href="signup.html">👤 Sign Up</a>
+    </div>
+    <div class="mobile-nav-bottom">
+      <div class="mobile-opt-item">
+        <span>Dark Theme</span>
+        <label class="tog-sw"><input type="checkbox" data-theme-toggle><span class="tog-sl"></span></label>
       </div>
-      
-      <!-- RTL Toggle -->
-      <div class="hdr-rtl-wrap" style="display:flex;align-items:center;gap:8px;padding-right:12px;border-right:1px solid var(--border);margin-right:5px;">
-        <span style="font-size:0.7rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.04em;">RTL</span>
-        <label class="tog-sw" title="Toggle RTL">
-          <input type="checkbox" data-rtl-toggle>
-          <span class="tog-sl"></span>
-        </label>
+      <div class="mobile-opt-item">
+        <span>RTL Layout</span>
+        <label class="tog-sw"><input type="checkbox" data-rtl-toggle><span class="tog-sl"></span></label>
       </div>
-
-      <a href="tools.html" class="hdr-btn"><i class="fa-solid fa-cart-shopping"></i><span class="cart-count">0</span></a>
-      <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
-  </div>
-</header>
-
-<!-- Mobile Nav -->
-<nav class="mobile-nav">
-  <div class="mobile-nav-top">
-    <a href="index.html" class="mobile-logo"><img src="assets/images/logo.png" alt="LuthierTools"></a>
-    <button class="mobile-close">✕</button>
-  </div>
-  <div class="mobile-links">
-    <a href="index.html">🏠 Home</a>
-    <a href="about.html">ℹ️ About</a>
-    <a href="tools.html">🔨 Tools</a>
-    <a href="supplies.html">📦 Supplies</a>
-    <a href="tutorials.html">🎓 Tutorials</a>
-    <a href="community.html">👥 Community</a>
-    <a href="contact.html">📞 Contact</a>
-    <div style="height:1px;background:var(--border);margin:10px 0;"></div>
-    <a href="login.html">🔐 Sign In</a>
-    <a href="signup.html">👤 Sign Up</a>
-  </div>
-  <div class="mobile-nav-bottom">
-    <div class="mobile-opt-item">
-      <span>Dark Theme</span>
-      <label class="tog-sw"><input type="checkbox" data-theme-toggle><span class="tog-sl"></span></label>
-    </div>
-    <div class="mobile-opt-item">
-      <span>RTL Layout</span>
-      <label class="tog-sw"><input type="checkbox" data-rtl-toggle><span class="tog-sl"></span></label>
-    </div>
-  </div>
-</nav>
+  </nav>
 
 <main>
   <!-- Hero Section -->
@@ -297,25 +324,25 @@
         <div class="col-lg-6 slide-right">
           <div class="row g-4">
             <div class="col-6">
-              <div class="stat-card-glass bg-alt text-center py-5">
+              <div class="stat-card-glass bg-alt text-center py-5 h-100">
                 <span class="stat-num" data-count="15" data-suffix="+">0+</span>
                 <span class="stat-lbl">Years of Excellence</span>
               </div>
             </div>
-            <div class="col-6" style="margin-top: 40px;">
-              <div class="stat-card-glass bg-alt text-center py-5">
+            <div class="col-6">
+              <div class="stat-card-glass bg-alt text-center py-5 h-100">
                 <span class="stat-num" data-count="250" data-suffix="+">0+</span>
                 <span class="stat-lbl">Custom Tools</span>
               </div>
             </div>
-            <div class="col-6" style="margin-top: -20px;">
-              <div class="stat-card-glass bg-alt text-center py-5">
+            <div class="col-6">
+              <div class="stat-card-glass bg-alt text-center py-5 h-100">
                 <span class="stat-num" data-count="42" data-suffix="">0</span>
                 <span class="stat-lbl">Countries Served</span>
               </div>
             </div>
-            <div class="col-6" style="margin-top: 20px;">
-              <div class="stat-card-glass bg-alt text-center py-5">
+            <div class="col-6">
+              <div class="stat-card-glass bg-alt text-center py-5 h-100">
                 <span class="stat-num" data-count="120" data-suffix="K">0K</span>
                 <span class="stat-lbl">Master Builders</span>
               </div>
@@ -417,9 +444,7 @@
         <div class="col-lg-4 col-md-6 slide-right d3">
           <div class="team-card">
             <div class="team-img-wrap">
-              <div style="width: 100%; height: 100%; background: var(--border); display: flex; align-items: center; justify-content: center; font-size: 3rem; color: var(--text-muted);">
-                <i class="fa-solid fa-user"></i>
-              </div>
+              <img src="assets/images/team-3.png" alt="Marcus Herr" class="team-img">
             </div>
             <h4 class="fw-bold mb-1">Marcus Herr</h4>
             <p class="text-primary fw-bold small text-uppercase">Supply Chain Director</p>
@@ -466,10 +491,10 @@
       <div class="col-lg-2 col-md-3 col-6"><h6 class="footer-heading">Account</h6><ul class="footer-links"><li><a href="login.html">Login</a></li><li><a href="signup.html">Sign Up</a></li><li><a href="dashboard/dashboard.html">Dashboard</a></li><li><a href="#">Trade Portal</a></li></ul></div>
     </div>
     <div class="footer-bottom" style="margin-top:60px;padding-top:30px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;">
-      <p style="margin:0;font-size:0.85rem;color:rgba(255,255,255,.38);">© 2026 LuthierTools Co. All rights reserved. Craft Better. Build Stronger.</p>
+      <p style="margin:0;font-size:0.85rem;color:rgba(255,255,255,.6);">© 2026 LuthierTools Co. All rights reserved. Craft Better. Build Stronger.</p>
       <div style="display:flex;gap:20px;align-items:center;">
-        <a href="#" style="font-size:0.85rem;color:rgba(255,255,255,.38);">Privacy Policy</a>
-        <a href="#" style="font-size:0.85rem;color:rgba(255,255,255,.38);">Terms of Service</a>
+        <a href="#" style="font-size:0.85rem;color:rgba(255,255,255,.6);">Privacy Policy</a>
+        <a href="#" style="font-size:0.85rem;color:rgba(255,255,255,.6);">Terms of Service</a>
       </div>
     </div>
   </div>
