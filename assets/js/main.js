@@ -35,6 +35,16 @@ const Theme = {
     document.querySelectorAll('[data-theme-toggle]').forEach(el => {
       if(el.type === 'checkbox') {
         el.checked = isDark;
+        // Update associated label text
+        const wrap = el.closest('.hdr-toggle-item, .mobile-opt-item');
+        if(wrap) {
+          const lbl = wrap.querySelector('.hdr-toggle-label, span');
+          if(lbl) {
+            const cur = lbl.textContent;
+            if(isDark) lbl.textContent = cur.replace('Dark', 'Light');
+            else lbl.textContent = cur.replace('Light', 'Dark');
+          }
+        }
       } else {
         el.innerHTML = isDark ? '<span class="theme-ico">☀️</span>' : '<span class="theme-ico">🌙</span>';
       }
@@ -75,12 +85,22 @@ const RTL = {
   },
   toggle(){ document.body.classList.contains('rtl') ? this.off() : this.on(); },
   updateUI(isRtl){
-    document.querySelectorAll('[data-rtl-toggle]').forEach(btn => {
-      if(btn.type === 'checkbox') {
-        btn.checked = isRtl;
+    document.querySelectorAll('[data-rtl-toggle]').forEach(el => {
+      if(el.type === 'checkbox') {
+        el.checked = isRtl;
+        // Update associated label text
+        const wrap = el.closest('.hdr-toggle-item, .mobile-opt-item');
+        if(wrap) {
+          const lbl = wrap.querySelector('.hdr-toggle-label, span');
+          if(lbl) {
+            const cur = lbl.textContent;
+            if(isRtl) lbl.textContent = cur.replace('RTL', 'LTR');
+            else lbl.textContent = cur.replace('LTR', 'RTL');
+          }
+        }
       } else {
-        btn.style.borderColor = isRtl ? 'var(--primary)' : '';
-        btn.style.background = isRtl ? 'rgba(146,64,14,0.05)' : '';
+        el.style.borderColor = isRtl ? 'var(--primary)' : '';
+        el.style.background = isRtl ? 'rgba(146,64,14,0.05)' : '';
       }
     });
   }
