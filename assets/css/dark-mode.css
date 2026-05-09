@@ -1,23 +1,29 @@
 /* ===== DARK MODE ===== */
 body.dark {
-  --bg: #000000; /* True Black */
-  --bg-alt: #121212; /* Dark Grey for alternate sections */
-  --surface: #0A0A0A; /* Slightly lighter than black */
+  --bg: #000000;
+  /* True Black */
+  --bg-alt: #121212;
+  /* Dark Grey for alternate sections */
+  --surface: #0A0A0A;
+  /* Slightly lighter than black */
   --surface-hover: #1A1A1A;
   --text: #F9FAFB;
-  --text-muted: #A1A1AA; /* Better contrast on black */
+  --text-muted: #A1A1AA;
+  /* Better contrast on black */
   --border: rgba(255, 255, 255, 0.1);
-  --border-focus: rgba(146, 64, 14, 0.4); /* Based on brand primary */
+  --border-focus: rgba(151, 89, 26, 0.4);
+  /* Based on brand primary */
   --gray-100: #000000;
   --gray-200: #121212;
   --gray-300: #1A1A1A;
-  --secondary: #000000;
-  --accent: #D97706; /* Keep gold as accent */
+  --secondary: #F3F4F6;
+  --accent: #D97706;
+  /* Keep gold as accent */
   --accent-light: #FDE68A;
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.8);
-  --shadow: 0 4px 20px rgba(0,0,0,0.9);
-  --shadow-lg: 0 12px 48px rgba(0,0,0,1);
-  --shadow-xl: 0 24px 80px rgba(0,0,0,1);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.8);
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.9);
+  --shadow-lg: 0 12px 48px rgba(0, 0, 0, 1);
+  --shadow-xl: 0 24px 80px rgba(0, 0, 0, 1);
   background-color: var(--bg);
 }
 
@@ -79,7 +85,7 @@ body.dark .hdr-btn {
 
 body.dark .hdr-btn:hover {
   background: var(--surface-hover);
-  border-color: rgba(255,255,255,0.15);
+  border-color: rgba(255, 255, 255, 0.15);
 }
 
 body.dark .product-card,
@@ -139,15 +145,23 @@ body.dark .search-box:focus-within .search-ico {
   stroke: var(--primary);
 }
 
-body.dark h1, body.dark h2, body.dark h3, body.dark h4, body.dark h5, body.dark h6,
-body.dark .sw-title, body.dark .auth-title {
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4,
+body.dark h5,
+body.dark h6,
+body.dark .sw-title,
+body.dark .auth-title {
   color: var(--text);
 }
 
 body.dark .auth-subtitle,
 body.dark .auth-footer,
 body.dark .auth-label,
-body.dark .auth-footer a {
+body.dark .auth-footer a,
+body.dark .text-muted,
+body.dark .sec-desc {
   color: var(--text-muted) !important;
 }
 
@@ -176,9 +190,14 @@ body.dark .breadcrumb-bar {
   border-bottom: 1px solid var(--border);
 }
 
+body.dark .breadcrumb-inner a {
+  color: var(--text-muted);
+  opacity: 1;
+}
+
 body.dark .breadcrumb-inner .sep {
-  color: var(--gray-300);
-  opacity: 0.3;
+  color: rgba(255, 255, 255, 0.3);
+  opacity: 1;
 }
 
 body.dark .breadcrumb-inner .current {
@@ -252,7 +271,7 @@ body.dark .sb-link {
 
 body.dark .sb-link:hover,
 body.dark .sb-link.active {
-  background: rgba(146, 64, 14, 0.15);
+  background: rgba(151, 89, 26, 0.15);
   color: var(--gold-light);
 }
 
@@ -309,7 +328,7 @@ body.dark .tier-opt {
 }
 
 body.dark .tier-opt.sel {
-  background: rgba(146, 64, 14, 0.1);
+  background: rgba(151, 89, 26, 0.1);
   border-color: var(--primary);
 }
 
@@ -365,14 +384,14 @@ body.dark .bg-alt {
 }
 
 body.dark .sec-tag {
-  background: rgba(146, 64, 14, 0.15);
+  background: rgba(151, 89, 26, 0.15);
   color: var(--gold-light);
-  border: 1px solid rgba(146, 64, 14, 0.2);
+  border: 1px solid rgba(151, 89, 26, 0.2);
 }
 
 body.dark .product-badge {
   background: var(--primary);
-  box-shadow: 0 4px 12px rgba(146, 64, 14, 0.3);
+  box-shadow: 0 4px 12px rgba(151, 89, 26, 0.3);
 }
 
 body.dark .stock.in {
@@ -413,7 +432,7 @@ body.dark .tutorial-card {
 body.dark .tutorial-card:hover {
   background: rgba(255, 255, 255, 0.06);
   border-color: var(--primary-light);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
 }
 
 body.dark .tutorial-title {
@@ -467,4 +486,3 @@ body.dark ::selection {
   background: var(--primary);
   color: #fff;
 }
-

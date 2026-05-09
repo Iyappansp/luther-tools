@@ -8,11 +8,11 @@
   <link rel="stylesheet" href="assets/css/dark-mode.css"/>
   <style>
     *{box-sizing:border-box;margin:0;padding:0}
-    body{min-height:100vh;background:linear-gradient(135deg,#1F2937 0%,#2D1A08 50%,#78350F 100%);display:flex;align-items:center;justify-content:center;padding:40px 20px;font-family:'Inter',-apple-system,sans-serif;position:relative;overflow:hidden}
+    body{min-height:100vh;background:linear-gradient(135deg,#1F2937 0%,#2D1A08 50%,#7D4915 100%);display:flex;align-items:center;justify-content:center;padding:40px 20px;font-family:'Inter',-apple-system,sans-serif;position:relative;overflow:hidden}
     body::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 60L60 0' stroke='rgba(255,255,255,.02)' stroke-width='1'/%3E%3C/svg%3E")}
     .cs-wrap{position:relative;z-index:2;max-width:660px;width:100%;text-align:center}
     .cs-logo{display:inline-flex;align-items:center;gap:12px;font-family:'Playfair Display',Georgia,serif;font-size:1.35rem;font-weight:700;color:#fff;text-decoration:none;margin-bottom:56px}
-    .cs-logo-icon{width:46px;height:46px;background:#92400E;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:1.3rem}
+    .cs-logo-icon{width:46px;height:46px;background:#97591A;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:1.3rem}
     .cs-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(146,64,14,.28);border:1px solid rgba(146,64,14,.5);color:#FCD34D;padding:6px 16px;border-radius:100px;font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:26px}
     .cs-title{font-family:'Playfair Display',Georgia,serif;font-size:clamp(2.5rem,7vw,5rem);font-weight:900;color:#fff;line-height:1.05;margin-bottom:18px}
     .cs-title em{color:#FCD34D;font-style:italic}
@@ -24,13 +24,13 @@
     .cs-email-row{display:flex;justify-content:center;margin-bottom:28px}
     .cs-input{padding:13px 18px;border:1px solid rgba(255,255,255,.2);border-radius:var(--radius) 0 0 var(--radius);background:rgba(255,255,255,.08);backdrop-filter:blur(8px);color:#fff;font-family:inherit;font-size:.9rem;outline:none;min-width:260px;flex:1;max-width:320px}
     .cs-input::placeholder{color:rgba(255,255,255,.42)}
-    .cs-btn{padding:13px 22px;background:#92400E;color:#fff;border:none;border-radius:0 var(--radius) var(--radius) 0;font-weight:700;cursor:pointer;font-family:inherit;font-size:.88rem;transition:background .3s;white-space:nowrap}
-    .cs-btn:hover{background:#78350F}
+    .cs-btn{padding:13px 22px;background:#97591A;color:#fff;border:none;border-radius:0 var(--radius) var(--radius) 0;font-weight:700;cursor:pointer;font-family:inherit;font-size:.88rem;transition:background .3s;white-space:nowrap}
+    .cs-btn:hover{background:#7D4915}
     .cs-note{color:rgba(255,255,255,.38);font-size:.76rem;margin-bottom:38px}
     .prog-wrap{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:18px 26px;margin-bottom:36px}
     .prog-hdr{display:flex;justify-content:space-between;margin-bottom:8px;font-size:.78rem;color:rgba(255,255,255,.55)}
     .prog-bar{background:rgba(255,255,255,.1);border-radius:4px;height:7px;overflow:hidden}
-    .prog-bar-fill{height:100%;background:linear-gradient(90deg,#92400E,#D97706);border-radius:4px;width:84%;animation:growBar 2s ease-out both}
+    .prog-bar-fill{height:100%;background:linear-gradient(90deg,#97591A,#D97706);border-radius:4px;width:84%;animation:growBar 2s ease-out both}
     @keyframes growBar{from{width:0}to{width:84%}}
     .prog-milestones{display:flex;justify-content:space-between;margin-top:12px;font-size:.74rem;color:rgba(255,255,255,.48)}
     .cs-links{display:flex;gap:18px;justify-content:center;flex-wrap:wrap}
