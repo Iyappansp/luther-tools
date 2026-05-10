@@ -316,6 +316,22 @@
     body.light #remember+label {
       color: var(--text-muted) !important;
     }
+
+    body.light .auth-footer {
+      color: var(--text-muted);
+    }
+
+    body.light .auth-footer a {
+      color: var(--primary);
+    }
+
+    body.light .forgot-pwd {
+      color: var(--text-muted) !important;
+    }
+
+    body.light .forgot-pwd:hover {
+      color: var(--primary) !important;
+    }
   </style>
   <link rel="icon" type="image/png" href="assets/images/favicon.png" />
 </head>
@@ -354,7 +370,7 @@
           <label for="remember" style="font-size:0.85rem; color:#fff; font-weight: 600; cursor:pointer;">Remember
             me</label>
         </div>
-        <a href="#" style="font-size:0.75rem; color:#fff; font-weight:600;">Forgot Password?</a>
+        <a href="#" class="forgot-pwd" style="font-size:0.75rem; color:#fff; font-weight:600;">Forgot Password?</a>
       </div>
 
       <button type="submit" class="submit-btn" id="loginBtn">

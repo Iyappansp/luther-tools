@@ -409,6 +409,14 @@
     body.light #tos+label {
       color: var(--text-muted) !important;
     }
+
+    body.light .auth-footer {
+      color: var(--text-muted) !important;
+    }
+
+    body.light .auth-footer a {
+      color: var(--primary) !important;
+    }
   </style>
   <link rel="icon" type="image/png" href="assets/images/favicon.png" />
 </head>
@@ -510,8 +518,8 @@
       </button>
     </div>
 
-    <p style="text-align:center; margin-top:24px; font-size:0.85rem; color:rgba(255, 255, 255, 0.7);">
-      Already have an account? <a href="login.html" style="color:var(--gold); font-weight:700;">Sign in</a>
+    <p class="auth-footer" style="text-align:center; margin-top:24px; font-size:0.85rem; color:rgba(255, 255, 255, 0.7);">
+      Already have an account? <a href="login.html" style="color:var(--primary); font-weight:700;">Sign in</a>
     </p>
   </div>
 
